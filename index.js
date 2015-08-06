@@ -21,10 +21,16 @@ var cli = meow({
     ]
 });
 var target        = parse(cli.input[0]);
+var conf          = require("./lib/config")();
 var prefix        = "public";
 var bs            = require('browser-sync').create('scrape');
 var pageload      = false;
-var homePath      = resolve(prefix, 'index.html');
+
+var indexOutput      = join(process.cwd(), prefix, 'index.html');
+
+if (target.path !== '/') {
+    indexOutput      = join(process.cwd(), prefix, target.path, 'index.html');
+}
 
 rmrf(prefix);
 
@@ -45,17 +51,17 @@ setTimeout(function () {
                     var filtered = utils.filterRequests([params]);
                     if (filtered.text.length) {
                         downloadText(filtered.text, function (err, tasks) {
-                            if (exists(homePath)) {
+                            if (exists(indexOutput)) {
                                 debug("HOME: rewritten with ", tasks.length, 'tasks');
-                                utils.writeWithTasks(read(homePath, "utf8"), tasks, homePath);
+                                utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
                             }
                         });
                     }
                     if (filtered.bin.length) {
                         utils.downloadBin(filtered.bin, function (err, tasks) {
-                            if (exists(homePath)) {
+                            if (exists(indexOutput)) {
                                 debug("HOME: rewritten with ", tasks.length, 'tasks');
-                                utils.writeWithTasks(read(homePath, "utf8"), tasks, homePath);
+                                utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
                             }
                         });
                     }
@@ -80,13 +86,19 @@ setTimeout(function () {
                     debug(String(tasks.length) + " text files written");
                     rewriteTasks = rewriteTasks.concat(tasks);
                     utils.downloadBin(filtered.bin, function (err, tasks) {
+                        if (err) {
+                            console.error(err);
+                            //return;
+                        }
                         debug(String(tasks.length) + " binary files written");
                         rewriteTasks = rewriteTasks.concat(tasks);
                         writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
                             debug(String(1) + " Homepage written");
+
                             bs.init({
                                 server: prefix,
                                 files: prefix,
+                                startPath: target.path,
                                 middleware: function (req, res, next) {
                                     var url = parse(req.url);
                                     //console.log('BS: ', extname(url.path), url.path);
@@ -151,7 +163,7 @@ setTimeout(function () {
             function writeHomepage (homeItem, tasks, cb) {
 
                 NETWORK.getResponseBody(homeItem, function (err, resp) {
-                    var newHtml = utils.writeWithTasks(resp.body, tasks, homePath);
+                    var newHtml = utils.writeWithTasks(resp.body, tasks, indexOutput);
                     cb(null, newHtml);
                 });
             }
