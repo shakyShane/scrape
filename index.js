@@ -2,44 +2,29 @@ var Chrome        = require('chrome-remote-interface');
 var parse         = require('url').parse;
 var debug         = require('debug')('scrape');
 var write         = require('fs').writeFileSync;
+var read          = require('fs').readFileSync;
+var exists        = require('fs').existsSync;
 var basename      = require('path').basename;
 var dirname       = require('path').dirname;
 var extname       = require('path').extname;
 var mkdirp        = require('mkdirp').sync;
 var rmrf          = require('rimraf').sync;
 var resolve       = require('path').resolve;
-var join       = require('path').join;
-var textWhitelist = [".js", ".css", ".svg", ".html"];
-var binWhitelist  = [".png", ".jpg", ".jpeg", ".gif"];
+var join          = require('path').join;
+var utils         = require('./lib/utils');
 var items         = [];
-var textItems     = [];
-var binItems      = [];
-var target        = parse("http://www.bbc.co.uk");
+var meow          = require('meow');
+var cli = meow({
+    help: [
+        'Usage',
+        '  scrape <url>'
+    ]
+});
+var target        = parse(cli.input[0]);
 var prefix        = "public";
-var Download      = require('download');
 var bs            = require('browser-sync').create('scrape');
 var pageload      = false;
-var homeHtml      = "";
-
-function filterRequests (items) {
-    if (!Array.isArray(items)) {
-        items = [items];
-    }
-    return items.reduce(function (all, item) {
-        var ext = extname(item.url.pathname);
-        if (item.request.url === item.documentURL) {
-            all.home.push(item);
-            return all;
-        }
-        if (textWhitelist.indexOf(ext) > -1) {
-            all.text.push(item);
-        }
-        if (binWhitelist.indexOf(ext) > -1) {
-            all.bin.push(item);
-        }
-        return all;
-    }, {text: [], bin: [], home: []});
-}
+var homePath      = resolve(prefix, 'index.html');
 
 rmrf(prefix);
 
@@ -52,13 +37,28 @@ setTimeout(function () {
             NETWORK.requestWillBeSent(function (params) {
 
                 params.url = parse(params.request.url);
+                debug("REQ", basename(params.url.path));
 
                 if (!pageload) {
                     items.push(params);
                 } else {
-                    debug("REQ AFTER", basename(params.url.path));
-                    //var filtered = filterRequests(params);
-                    //console.log(filtered);
+                    var filtered = utils.filterRequests([params]);
+                    if (filtered.text.length) {
+                        downloadText(filtered.text, function (err, tasks) {
+                            if (exists(homePath)) {
+                                debug("HOME: rewritten with ", tasks.length, 'tasks');
+                                utils.writeWithTasks(read(homePath, "utf8"), tasks, homePath);
+                            }
+                        });
+                    }
+                    if (filtered.bin.length) {
+                        utils.downloadBin(filtered.bin, function (err, tasks) {
+                            if (exists(homePath)) {
+                                debug("HOME: rewritten with ", tasks.length, 'tasks');
+                                utils.writeWithTasks(read(homePath, "utf8"), tasks, homePath);
+                            }
+                        });
+                    }
                 }
             });
 
@@ -69,15 +69,51 @@ setTimeout(function () {
                 console.log('Served from cache:', res);
             });
 
+            Page.loadEventFired(function () {
+
+                pageload = true;
+
+                var filtered = utils.filterRequests(items);
+                var rewriteTasks = [];
+
+                downloadText(filtered.text, function (err, tasks) {
+                    debug(String(tasks.length) + " text files written");
+                    rewriteTasks = rewriteTasks.concat(tasks);
+                    utils.downloadBin(filtered.bin, function (err, tasks) {
+                        debug(String(tasks.length) + " binary files written");
+                        rewriteTasks = rewriteTasks.concat(tasks);
+                        writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
+                            debug(String(1) + " Homepage written");
+                            bs.init({
+                                server: prefix,
+                                files: prefix,
+                                middleware: function (req, res, next) {
+                                    var url = parse(req.url);
+                                    //console.log('BS: ', extname(url.path), url.path);
+                                    next();
+                                }
+                            });
+                            //close();
+                        });
+                    })
+                });
+            });
+
+            /**
+             * Download txt documents
+             * @param items
+             * @param cb
+             */
             function downloadText (items, cb) {
 
                 var count        = 0;
+                cb = cb || function () {};
                 var len          = items.length;
                 var rewriteTasks = [];
 
                 items.forEach(function (item) {
 
-                    var output   = resolve(prefix, item.url.path.slice(1));
+                    var output   = resolve(prefix, item.url.pathname.slice(1));
                     var _dirname = dirname(output);
                     mkdirp(_dirname);
 
@@ -95,7 +131,7 @@ setTimeout(function () {
 
                         rewriteTasks.push(item);
 
-                        debug('TXT:', extname(output), basename(output));
+                        debug('DL txt:', extname(output), basename(output));
 
                         count += 1;
                         if (count === len) {
@@ -105,78 +141,20 @@ setTimeout(function () {
                 });
             }
 
-            Page.loadEventFired(function () {
 
-                pageload = true;
 
-                var filtered = filterRequests(items);
-                var rewriteTasks = [];
+            /**
+             * Download and overwrite the homepage
+             * @param homeItem
+             * @param tasks
+             */
+            function writeHomepage (homeItem, tasks, cb) {
 
-                downloadText(filtered.text, function (err, tasks) {
-                    debug(String(tasks.length) + " text files written");
-                    rewriteTasks = rewriteTasks.concat(tasks);
-                    downloadBin(filtered.bin, function (err, tasks) {
-                        debug(String(tasks.length) + " binary files written");
-                        rewriteTasks = rewriteTasks.concat(tasks);
-                        writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
-                            debug(String(1) + " Homepage written");
-                            bs.init({
-                                server: prefix,
-                                files: prefix,
-                                middleware: function (req, res, next) {
-                                    var url = parse(req.url);
-                                    console.log('BS: ', extname(url.path), url.path);
-                                    next();
-                                }
-                            });
-                            //close();
-                        });
-                    })
+                NETWORK.getResponseBody(homeItem, function (err, resp) {
+                    var newHtml = utils.writeWithTasks(resp.body, tasks, homePath);
+                    cb(null, newHtml);
                 });
-
-                /**
-                 * Download a bunch of binary files
-                 * @param items
-                 * @param cb
-                 */
-                function downloadBin (items, cb) {
-
-                    var dl = new Download({mode: '755'});
-                    items.forEach(function (item) {
-                        debug("BIN:", extname(item.request.url), basename(item.request.url));
-                        dl.get(item.request.url, join(process.cwd(), prefix, dirname(item.url.path)));
-                    });
-
-                    dl.run(function (err, files) {
-                        if (err) {
-                            return cb(err);
-                        }
-                        cb(null, items);
-                    });
-
-                }
-
-                /**
-                 * Download and overwrite the homepage
-                 * @param homeItem
-                 * @param tasks
-                 */
-                function writeHomepage (homeItem, tasks, cb) {
-
-                    NETWORK.getResponseBody(homeItem, function (err, resp) {
-
-                        var homeHtml = resp.body;
-                        tasks.forEach(function (item) {
-                            homeHtml = homeHtml.replace(item.url.href, item.url.path);
-                        });
-
-                        var home = resolve(prefix, 'index.html');
-                        write(home, homeHtml);
-                        cb(null, homeHtml);
-                    });
-
-                }
-            });
+            }
 
             NETWORK.enable();
             Page.enable();
