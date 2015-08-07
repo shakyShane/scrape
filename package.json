@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape 'test/specs/**/*' | faucet"
+    "test": "tape 'test/specs/**/*'"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +21,7 @@
     "express": "^4.13.3",
     "faucet": "0.0.1",
     "opn": "^3.0.2",
+    "rx": "^3.0.0",
     "serve-static": "^1.10.0",
     "tape": "^4.0.3"
   }

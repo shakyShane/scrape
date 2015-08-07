@@ -1,0 +1,597 @@
+{
+    "text": [
+        {
+            "requestId": "9698.418",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/css/core.min.css",
+                "method": "GET",
+                "headers": {
+                    "Accept": "text/css,*/*;q=0.1",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.01865,
+            "wallTime": 1438959106.25341,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 14
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/css/core.min.css",
+                "path": "/css/core.min.css",
+                "href": "http://localhost:9000/css/core.min.css"
+            }
+        },
+        {
+            "requestId": "9698.429",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/js/dist/app.min.js",
+                "method": "GET",
+                "headers": {
+                    "Accept": "*/*",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019345,
+            "wallTime": 1438959106.25411,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 299
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/js/dist/app.min.js",
+                "path": "/js/dist/app.min.js",
+                "href": "http://localhost:9000/js/dist/app.min.js"
+            }
+        },
+        {
+            "requestId": "9698.430",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/icons/icons.svg",
+                "method": "GET",
+                "headers": {
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019512,
+            "wallTime": 1438959106.25427,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 25
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/icons/icons.svg",
+                "path": "/img/icons/icons.svg",
+                "href": "http://localhost:9000/img/icons/icons.svg"
+            }
+        }
+    ],
+    "bin": [
+        {
+            "requestId": "9698.419",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/ezgif.com-optimize.gif",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.018759,
+            "wallTime": 1438959106.25352,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 85
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/ezgif.com-optimize.gif",
+                "path": "/img/ezgif.com-optimize.gif",
+                "href": "http://localhost:9000/img/ezgif.com-optimize.gif"
+            }
+        },
+        {
+            "requestId": "9698.420",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/platforms.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.018826,
+            "wallTime": 1438959106.25359,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 86
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/platforms.png",
+                "path": "/img/platforms.png",
+                "href": "http://localhost:9000/img/platforms.png"
+            }
+        },
+        {
+            "requestId": "9698.421",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/build-tools.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.018885,
+            "wallTime": 1438959106.25365,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 91
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/build-tools.png",
+                "path": "/img/build-tools.png",
+                "href": "http://localhost:9000/img/build-tools.png"
+            }
+        },
+        {
+            "requestId": "9698.422",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/jh-logo.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.018946,
+            "wallTime": 1438959106.25371,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 182
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/jh-logo.png",
+                "path": "/img/jh-logo.png",
+                "href": "http://localhost:9000/img/jh-logo.png"
+            }
+        },
+        {
+            "requestId": "9698.423",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/user-paravel.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.01901,
+            "wallTime": 1438959106.25377,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 204
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/user-paravel.png",
+                "path": "/img/user-paravel.png",
+                "href": "http://localhost:9000/img/user-paravel.png"
+            }
+        },
+        {
+            "requestId": "9698.424",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/user-google.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019065,
+            "wallTime": 1438959106.25383,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 205
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/user-google.png",
+                "path": "/img/user-google.png",
+                "href": "http://localhost:9000/img/user-google.png"
+            }
+        },
+        {
+            "requestId": "9698.425",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/user-adobe.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019121,
+            "wallTime": 1438959106.25388,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 206
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/user-adobe.png",
+                "path": "/img/user-adobe.png",
+                "href": "http://localhost:9000/img/user-adobe.png"
+            }
+        },
+        {
+            "requestId": "9698.426",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/user-rupert-sm.jpg",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019181,
+            "wallTime": 1438959106.25394,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 209
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/user-rupert-sm.jpg",
+                "path": "/img/user-rupert-sm.jpg",
+                "href": "http://localhost:9000/img/user-rupert-sm.jpg"
+            }
+        },
+        {
+            "requestId": "9698.427",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/user-addy-sm.jpg",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019234,
+            "wallTime": 1438959106.254,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 215
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/user-addy-sm.jpg",
+                "path": "/img/user-addy-sm.jpg",
+                "href": "http://localhost:9000/img/user-addy-sm.jpg"
+            }
+        },
+        {
+            "requestId": "9698.428",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/jh-logo-white.png",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.019291,
+            "wallTime": 1438959106.25405,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 294
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/jh-logo-white.png",
+                "path": "/img/jh-logo-white.png",
+                "href": "http://localhost:9000/img/jh-logo-white.png"
+            }
+        },
+        {
+            "requestId": "9698.431",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/bg.jpg",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/css/core.min.css",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.05159,
+            "wallTime": 1438959106.28635,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 1
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/bg.jpg",
+                "path": "/img/bg.jpg",
+                "href": "http://localhost:9000/img/bg.jpg"
+            }
+        },
+        {
+            "requestId": "9698.432",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/img/jh-bg.jpg",
+                "method": "GET",
+                "headers": {
+                    "Accept": "image/webp,image/*,*/*;q=0.8",
+                    "Referer": "http://localhost:9000/css/core.min.css",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27895.052525,
+            "wallTime": 1438959106.28729,
+            "initiator": {
+                "type": "parser",
+                "url": "http://localhost:9000/",
+                "lineNumber": 1
+            },
+            "type": "Other",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/img/jh-bg.jpg",
+                "path": "/img/jh-bg.jpg",
+                "href": "http://localhost:9000/img/jh-bg.jpg"
+            }
+        }
+    ],
+    "home": [
+        {
+            "requestId": "9698.417",
+            "frameId": "9698.2",
+            "loaderId": "9698.55",
+            "documentURL": "http://localhost:9000/",
+            "request": {
+                "url": "http://localhost:9000/",
+                "method": "GET",
+                "headers": {
+                    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+                    "Upgrade-Insecure-Requests": "1",
+                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2475.0 Safari/537.36"
+                }
+            },
+            "timestamp": 27894.962976,
+            "wallTime": 1438959106.19774,
+            "initiator": {
+                "type": "other"
+            },
+            "type": "Document",
+            "url": {
+                "protocol": "http:",
+                "slashes": true,
+                "auth": null,
+                "host": "localhost:9000",
+                "port": "9000",
+                "hostname": "localhost",
+                "hash": null,
+                "search": null,
+                "query": null,
+                "pathname": "/",
+                "path": "/",
+                "href": "http://localhost:9000/"
+            }
+        }
+    ]
+}

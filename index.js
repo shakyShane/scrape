@@ -7,6 +7,7 @@ var exists        = require('fs').existsSync;
 var basename      = require('path').basename;
 var join          = require('path').join;
 var utils         = require('./lib/utils');
+var Rx            = require('rx');
 var items         = [];
 var allItems      = {
     text: [],
@@ -117,32 +118,39 @@ function handleCli (cli, cb) {
                  * to build out the site
                  * @type {boolean}
                  */
-                pageload = true;
+                pageload     = true;
+                var filtered = utils.filterRequests(items, config);
 
-                var filtered     = utils.filterRequests(items, config);
+                var text = {
+                    items: filtered.text,
+                    config: config,
+                    chrome: chrome
+                };
+
+                var bin = {
+                    items: filtered.bin,
+                    config: config,
+                    chrome: chrome
+                };
+
                 var rewriteTasks = [];
 
-                allItems.home    = allItems.home.concat(filtered.home);
+                var dlText = Rx.Observable.fromNodeCallback(utils.downloadText);
+                var dlBin  = Rx.Observable.fromNodeCallback(utils.downloadBin);
+                var dlOne  = Rx.Observable.fromNodeCallback(utils.downloadOne);
+                var stream = Rx.Observable.fromArray(filtered.text);
 
-                utils.downloadText(filtered.text, config, chrome, function (err, tasks) {
+                function getOne (items, tasks) {
+                    return Rx.Observable.create(function (obs) {
 
-                    debug(String(tasks.length) + " text files written");
+                        utils.downloadOne({
+                            items: items,
+                            config: config,
+                            chrome: chrome
+                        }, function (err, body) {
 
-                    rewriteTasks = rewriteTasks.concat(tasks);
-
-                    utils.downloadBin(filtered.bin, config, function (err, tasks) {
-
-                        if (err) {
-                            console.error(err);
-                        }
-
-                        debug(String(tasks.length) + " binary files written");
-
-                        rewriteTasks = rewriteTasks.concat(tasks);
-
-                        utils.downloadOne(filtered.home[0], chrome, function (err, body) {
                             if (err) {
-                                return cb(err);
+                                return obs.onError(err);
                             }
 
                             var newHtml = utils.writeWithTasks(body, rewriteTasks, indexOutput);
@@ -150,14 +158,76 @@ function handleCli (cli, cb) {
                             debug(String(1) + " Homepage written");
                             debug('Chrome closed');
 
-                            cb(null, {
+                            obs.onNext({
                                 homeHtml: newHtml,
                                 chrome: chrome,
-                                items: allItems
+                                items: tasks
                             });
+                            obs.onCompleted();
                         });
+                    })
+                }
+
+                stream
+                    .concatMap(function() { return dlText(text); })
+                    .concatMap(function() { return dlBin(bin); })
+                    .concatMap(function (tasks) {
+                        return getOne(filtered.home, tasks);
+                    })
+                    .subscribe(function (val) {
+                        cb(null, val);
+                    }, function (all) {
+                        console.log('ALL');
+                    }, function (err) {
+                        cb(err);
                     });
-                });
+
+                //utils.downloadText({
+                //    items: filtered.text,
+                //    config: config,
+                //    chrome: chrome
+                //}, function (err, tasks) {
+                //
+                //    debug(String(tasks.length) + " text files written");
+                //
+                //    rewriteTasks = rewriteTasks.concat(tasks);
+                //
+                //    utils.downloadBin({
+                //        items: filtered.bin,
+                //        config: config,
+                //        chrome: chrome
+                //    }, function (err, tasks) {
+                //
+                //        if (err) {
+                //            console.error(err);
+                //        }
+                //
+                //        debug(String(tasks.length) + " binary files written");
+                //
+                //        rewriteTasks = rewriteTasks.concat(tasks);
+                //
+                //        utils.downloadOne({
+                //            items: filtered.home,
+                //            config: config,
+                //            chrome: chrome
+                //        }, function (err, body) {
+                //            if (err) {
+                //                return cb(err);
+                //            }
+                //
+                //            var newHtml = utils.writeWithTasks(body, rewriteTasks, indexOutput);
+                //
+                //            debug(String(1) + " Homepage written");
+                //            debug('Chrome closed');
+                //
+                //            cb(null, {
+                //                homeHtml: newHtml,
+                //                chrome: chrome,
+                //                items: allItems
+                //            });
+                //        });
+                //    });
+                //});
             });
 
             chrome.Network.enable();
