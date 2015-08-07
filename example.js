@@ -3,31 +3,25 @@ var json = require('./out.json');
 
 var slow = Rx.Observable.fromNodeCallback(function (item, cb) {
     setTimeout(function () {
-        console.log('WRITING 1');
-        item.waited = 'forever - 1';
-        cb(null, item);
-    }, 1000);
-});
-var slow2 = Rx.Observable.fromNodeCallback(function (item, cb) {
-    setTimeout(function () {
-        console.log('WRITING 2');
-        item.waited2 = 'forever - 2';
-        cb(new Error('as'));
+        cb(null, 1000);
     }, 1000);
 });
 
-Rx.Observable
+var slow2 = Rx.Observable.fromNodeCallback(function (item, cb) {
+    setTimeout(function () {
+        cb(null, 2000);
+    }, 1000);
+});
+
+var source = Rx.Observable
     .fromArray(json.text)
-    .concatMap(function (item) {
+    .map(function (item) {
         return slow(item);
     })
-    .concatMap(function (item) {
-        return slow2(item);
-    })
     .subscribe(function (val) {
-        //console.log(val);
+        console.log('value', val);
     }, function (err) {
         console.log(err);
     }, function (values, va) {
-        console.log(values, va);
+        console.log('END');
     });

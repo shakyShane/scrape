@@ -1,9 +1,8 @@
-var scrape      = require('../../index');
-//var bs          = require('browser-sync').create('scrape');
-var rmrf        = require('rimraf').sync;
-var http        = require('http');
-var utils       = require('../utils');
-var test        = require('tape');
+var scrape = require('../../index');
+var rmrf   = require('rimraf').sync;
+var http   = require('http');
+var utils  = require('../utils');
+var test   = require('tape');
 
 test('Rewriting absolute URLs to local-root urls', function (t) {
 
@@ -31,10 +30,7 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
 
         server.cleanup();
 
-        console.log('Test output number', output.length);
-
-        //t.deepEqual(output.homeHtml, utils.file(expected));
-        t.equal(2, 2);
+        t.deepEqual(output.home.rewritten, utils.file(expected));
         t.end();
     });
 });
