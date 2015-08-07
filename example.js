@@ -1,17 +1,7 @@
 var Rx = require('rx');
 var json = require('./out.json');
-
-var slow = Rx.Observable.fromNodeCallback(function (item, cb) {
-    setTimeout(function () {
-        cb(null, 1000);
-    }, 1000);
-});
-
-var slow2 = Rx.Observable.fromNodeCallback(function (item, cb) {
-    setTimeout(function () {
-        cb(null, 2000);
-    }, 1000);
-});
+var shane = true;
+var int = Rx.Observable.interval(100);
 
 var source = Rx.Observable
     .fromArray(json.text)
