@@ -18,6 +18,8 @@
   "devDependencies": {
     "browser-sync": "^2.8.2",
     "download": "^4.2.0",
-    "opn": "^3.0.2"
+    "express": "^4.13.3",
+    "opn": "^3.0.2",
+    "serve-static": "^1.10.0"
   }
 }

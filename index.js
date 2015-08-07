@@ -14,36 +14,42 @@ var join          = require('path').join;
 var utils         = require('./lib/utils');
 var items         = [];
 var meow          = require('meow');
+
+var defaultCallback = function (err, output) {
+    console.log('DONE', output);
+};
+
 var cli = meow({
     help: [
         'Usage',
         '  scrape <url>'
     ]
 });
-var target        = parse(cli.input[0]);
-var conf          = require("./lib/config")();
-var prefix        = "public";
-var bs            = require('browser-sync').create('scrape');
-var pageload      = false;
 
-var indexOutput      = join(process.cwd(), prefix, 'index.html');
-
-if (target.path !== '/') {
-    indexOutput      = join(process.cwd(), prefix, target.path, 'index.html');
+if (!module.parent) {
+    handleCli(cli, defaultCallback);
 }
 
-rmrf(prefix);
+function handleCli (cli, cb) {
 
-setTimeout(function () {
-    Chrome(function (chrome) {
-        with (chrome) {
+    var target        = parse(cli.input[0]);
+    var conf          = require("./lib/config")(cli.flags);
+    var prefix        = cli.flags.output || "public";
+    var pageload      = false;
 
-            var NETWORK = Network;
+    var indexOutput      = join(process.cwd(), prefix, 'index.html');
 
-            NETWORK.requestWillBeSent(function (params) {
+    if (target.path !== '/') {
+        indexOutput      = join(process.cwd(), prefix, target.path, 'index.html');
+    }
+
+    setTimeout(function () {
+        Chrome(function (chrome) {
+
+            chrome.Network.requestWillBeSent(function (params) {
 
                 params.url = parse(params.request.url);
-                debug("REQ", basename(params.url.path));
+                debug("REQ", basename(params.url.path), params.url.href);
 
                 if (!pageload) {
                     items.push(params);
@@ -68,14 +74,14 @@ setTimeout(function () {
                 }
             });
 
-            NETWORK.clearBrowserCache();
-            NETWORK.clearBrowserCookies();
+            chrome.Network.clearBrowserCache();
+            chrome.Network.clearBrowserCookies();
 
-            NETWORK.requestServedFromCache(function (res) {
+            chrome.Network.requestServedFromCache(function (res) {
                 console.log('Served from cache:', res);
             });
 
-            Page.loadEventFired(function () {
+            chrome.Page.loadEventFired(function () {
 
                 pageload = true;
 
@@ -95,15 +101,9 @@ setTimeout(function () {
                         writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
                             debug(String(1) + " Homepage written");
 
-                            bs.init({
-                                server: prefix,
-                                files: prefix,
-                                startPath: target.path,
-                                middleware: function (req, res, next) {
-                                    var url = parse(req.url);
-                                    //console.log('BS: ', extname(url.path), url.path);
-                                    next();
-                                }
+                            cb(null, {
+                                chrome: chrome,
+                                home: homeHtml
                             });
                             //close();
                         });
@@ -129,7 +129,7 @@ setTimeout(function () {
                     var _dirname = dirname(output);
                     mkdirp(_dirname);
 
-                    NETWORK.getResponseBody(item, function (err, resp) {
+                    chrome.Network.getResponseBody(item, function (err, resp) {
 
                         // Write the file to disk
                         if (resp.base64Encoded) {
@@ -162,19 +162,24 @@ setTimeout(function () {
              */
             function writeHomepage (homeItem, tasks, cb) {
 
-                NETWORK.getResponseBody(homeItem, function (err, resp) {
+                chrome.Network.getResponseBody(homeItem, function (err, resp) {
+                    if (err) {
+                        return cb(err);
+                    }
                     var newHtml = utils.writeWithTasks(resp.body, tasks, indexOutput);
                     cb(null, newHtml);
                 });
             }
 
-            NETWORK.enable();
-            Page.enable();
-            once('ready', function () {
-                Page.navigate({'url': target.href});
+            chrome.Network.enable();
+            chrome.Page.enable();
+            chrome.once('ready', function () {
+                chrome.Page.navigate({'url': target.href});
             });
-        }
-    }).on('error', function () {
-        console.error('Cannot connect to Chrome');
-    });
-}, 3000);
+        }).on('error', function () {
+            console.error('Cannot connect to Chrome');
+        });
+    }, 3000);
+}
+
+module.exports = handleCli;
