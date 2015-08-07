@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape 'test/specs/**/*' | faucet"
   },
   "author": "",
   "license": "ISC",
@@ -19,7 +19,9 @@
     "browser-sync": "^2.8.2",
     "download": "^4.2.0",
     "express": "^4.13.3",
+    "faucet": "0.0.1",
     "opn": "^3.0.2",
-    "serve-static": "^1.10.0"
+    "serve-static": "^1.10.0",
+    "tape": "^4.0.3"
   }
 }

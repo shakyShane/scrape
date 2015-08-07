@@ -13,6 +13,11 @@ var resolve       = require('path').resolve;
 var join          = require('path').join;
 var utils         = require('./lib/utils');
 var items         = [];
+var allItems      = {
+    text: [],
+    bin: [],
+    home: []
+};
 var meow          = require('meow');
 
 var defaultCallback = function (err, output) {
@@ -32,6 +37,7 @@ if (!module.parent) {
 
 function handleCli (cli, cb) {
 
+    cb = cb || defaultCallback;
     var target        = parse(cli.input[0]);
     var conf          = require("./lib/config")(cli.flags);
     var prefix        = cli.flags.output || "public";
@@ -56,17 +62,19 @@ function handleCli (cli, cb) {
                 } else {
                     var filtered = utils.filterRequests([params]);
                     if (filtered.text.length) {
+                        allItems.text = allItems.text.concat(filtered.text);
                         downloadText(filtered.text, function (err, tasks) {
                             if (exists(indexOutput)) {
-                                debug("HOME: rewritten with ", tasks.length, 'tasks');
+                                debug("HOME: REwritten with ", tasks.length, 'tasks');
                                 utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
                             }
                         });
                     }
                     if (filtered.bin.length) {
+                        allItems.bin = allItems.bin.concat(filtered.bin);
                         utils.downloadBin(filtered.bin, function (err, tasks) {
                             if (exists(indexOutput)) {
-                                debug("HOME: rewritten with ", tasks.length, 'tasks');
+                                debug("HOME: REwritten with ", tasks.length, 'tasks');
                                 utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
                             }
                         });
@@ -85,29 +93,41 @@ function handleCli (cli, cb) {
 
                 pageload = true;
 
-                var filtered = utils.filterRequests(items);
+                var filtered     = utils.filterRequests(items);
                 var rewriteTasks = [];
 
+                allItems.home    = allItems.home.concat(filtered.home);
+
                 downloadText(filtered.text, function (err, tasks) {
+
                     debug(String(tasks.length) + " text files written");
+
                     rewriteTasks = rewriteTasks.concat(tasks);
+
                     utils.downloadBin(filtered.bin, function (err, tasks) {
+
                         if (err) {
                             console.error(err);
-                            //return;
                         }
+
                         debug(String(tasks.length) + " binary files written");
+
                         rewriteTasks = rewriteTasks.concat(tasks);
+
                         writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
+                            if (err) {
+                                return cb(err);
+                            }
+
                             debug(String(1) + " Homepage written");
+                            debug('Chrome closed');
 
                             cb(null, {
-                                chrome: chrome,
-                                home: homeHtml
+                                homeHtml: homeHtml,
+                                chrome: chrome
                             });
-                            //close();
                         });
-                    })
+                    });
                 });
             });
 
@@ -119,7 +139,7 @@ function handleCli (cli, cb) {
             function downloadText (items, cb) {
 
                 var count        = 0;
-                cb = cb || function () {};
+                cb               = cb || function () {};
                 var len          = items.length;
                 var rewriteTasks = [];
 
