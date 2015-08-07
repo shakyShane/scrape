@@ -5,11 +5,6 @@ var write         = require('fs').writeFileSync;
 var read          = require('fs').readFileSync;
 var exists        = require('fs').existsSync;
 var basename      = require('path').basename;
-var dirname       = require('path').dirname;
-var extname       = require('path').extname;
-var mkdirp        = require('mkdirp').sync;
-var rmrf          = require('rimraf').sync;
-var resolve       = require('path').resolve;
 var join          = require('path').join;
 var utils         = require('./lib/utils');
 var items         = [];
@@ -37,42 +32,74 @@ if (!module.parent) {
 
 function handleCli (cli, cb) {
 
-    cb = cb || defaultCallback;
-    var target        = parse(cli.input[0]);
-    var conf          = require("./lib/config")(cli.flags);
-    var prefix        = cli.flags.output || "public";
-    var pageload      = false;
+    cb           = cb || defaultCallback;
+    var target   = parse(cli.input[0]);
+    var config   = require("./lib/config")(cli.flags);
+    var prefix   = cli.flags.output || "public";
 
-    var indexOutput      = join(process.cwd(), prefix, 'index.html');
+    var pageload    = false;
+    var indexOutput = join(process.cwd(), prefix, 'index.html');
 
     if (target.path !== '/') {
-        indexOutput      = join(process.cwd(), prefix, target.path, 'index.html');
+        indexOutput = join(process.cwd(), prefix, target.path, 'index.html');
     }
 
     setTimeout(function () {
         Chrome(function (chrome) {
+            /**
+             * Disable cache & clear cookies
+             */
+            chrome.Network.clearBrowserCache();
+            chrome.Network.clearBrowserCookies();
 
+            /**
+             *
+             */
+            chrome.Network.requestServedFromCache(function (res) {
+                debug('Served from cache:', res);
+            });
+
+            /**
+             * Handle incoming requests
+             */
             chrome.Network.requestWillBeSent(function (params) {
 
+                /**
+                 * Always decorate incoming req object with parsed URL
+                 * @type {number|*}
+                 */
                 params.url = parse(params.request.url);
                 debug("REQ", basename(params.url.path), params.url.href);
 
+                /**
+                 * If we're not done with initial page load yet, push
+                 * this item into the 'later' stack
+                 */
                 if (!pageload) {
                     items.push(params);
                 } else {
-                    var filtered = utils.filterRequests([params]);
+                    /**
+                     * Filter req objects for downloadables
+                     */
+                    var filtered = utils.filterRequests([params], config);
+                    /**
+                     * If there are text items in the queue, download them
+                     */
                     if (filtered.text.length) {
                         allItems.text = allItems.text.concat(filtered.text);
-                        downloadText(filtered.text, function (err, tasks) {
+                        utils.downloadText(filtered.text, config, chrome, function (err, tasks) {
                             if (exists(indexOutput)) {
                                 debug("HOME: REwritten with ", tasks.length, 'tasks');
                                 utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
                             }
                         });
                     }
+                    /**
+                     * If there are binary items in the queue, download them
+                     */
                     if (filtered.bin.length) {
                         allItems.bin = allItems.bin.concat(filtered.bin);
-                        utils.downloadBin(filtered.bin, function (err, tasks) {
+                        utils.downloadBin(filtered.bin, config, function (err, tasks) {
                             if (exists(indexOutput)) {
                                 debug("HOME: REwritten with ", tasks.length, 'tasks');
                                 utils.writeWithTasks(read(indexOutput, "utf8"), tasks, indexOutput);
@@ -82,29 +109,28 @@ function handleCli (cli, cb) {
                 }
             });
 
-            chrome.Network.clearBrowserCache();
-            chrome.Network.clearBrowserCookies();
-
-            chrome.Network.requestServedFromCache(function (res) {
-                console.log('Served from cache:', res);
-            });
-
             chrome.Page.loadEventFired(function () {
 
+                /**
+                 * Set the page load flag.
+                 * This is to indicate that we have enough resources cached
+                 * to build out the site
+                 * @type {boolean}
+                 */
                 pageload = true;
 
-                var filtered     = utils.filterRequests(items);
+                var filtered     = utils.filterRequests(items, config);
                 var rewriteTasks = [];
 
                 allItems.home    = allItems.home.concat(filtered.home);
 
-                downloadText(filtered.text, function (err, tasks) {
+                utils.downloadText(filtered.text, config, chrome, function (err, tasks) {
 
                     debug(String(tasks.length) + " text files written");
 
                     rewriteTasks = rewriteTasks.concat(tasks);
 
-                    utils.downloadBin(filtered.bin, function (err, tasks) {
+                    utils.downloadBin(filtered.bin, config, function (err, tasks) {
 
                         if (err) {
                             console.error(err);
@@ -114,82 +140,25 @@ function handleCli (cli, cb) {
 
                         rewriteTasks = rewriteTasks.concat(tasks);
 
-                        writeHomepage(filtered.home[0], rewriteTasks, function (err, homeHtml) {
+                        utils.downloadOne(filtered.home[0], chrome, function (err, body) {
                             if (err) {
                                 return cb(err);
                             }
+
+                            var newHtml = utils.writeWithTasks(body, rewriteTasks, indexOutput);
 
                             debug(String(1) + " Homepage written");
                             debug('Chrome closed');
 
                             cb(null, {
-                                homeHtml: homeHtml,
-                                chrome: chrome
+                                homeHtml: newHtml,
+                                chrome: chrome,
+                                items: allItems
                             });
                         });
                     });
                 });
             });
-
-            /**
-             * Download txt documents
-             * @param items
-             * @param cb
-             */
-            function downloadText (items, cb) {
-
-                var count        = 0;
-                cb               = cb || function () {};
-                var len          = items.length;
-                var rewriteTasks = [];
-
-                items.forEach(function (item) {
-
-                    var output   = resolve(prefix, item.url.pathname.slice(1));
-                    var _dirname = dirname(output);
-                    mkdirp(_dirname);
-
-                    chrome.Network.getResponseBody(item, function (err, resp) {
-
-                        // Write the file to disk
-                        if (resp.base64Encoded) {
-                            write(
-                                output,
-                                new Buffer(resp.body, 'base64').toString('ascii')
-                            );
-                        } else {
-                            write(output, resp.body);
-                        }
-
-                        rewriteTasks.push(item);
-
-                        debug('DL txt:', extname(output), basename(output));
-
-                        count += 1;
-                        if (count === len) {
-                            cb(null, rewriteTasks);
-                        }
-                    });
-                });
-            }
-
-
-
-            /**
-             * Download and overwrite the homepage
-             * @param homeItem
-             * @param tasks
-             */
-            function writeHomepage (homeItem, tasks, cb) {
-
-                chrome.Network.getResponseBody(homeItem, function (err, resp) {
-                    if (err) {
-                        return cb(err);
-                    }
-                    var newHtml = utils.writeWithTasks(resp.body, tasks, indexOutput);
-                    cb(null, newHtml);
-                });
-            }
 
             chrome.Network.enable();
             chrome.Page.enable();

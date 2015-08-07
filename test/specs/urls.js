@@ -1,6 +1,5 @@
-var assert      = require('assert');
 var scrape      = require('../../index');
-var bs          = require('browser-sync').create('scrape');
+//var bs          = require('browser-sync').create('scrape');
 var rmrf        = require('rimraf').sync;
 var http        = require('http');
 var utils       = require('../utils');
@@ -10,9 +9,12 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
 
     t.plan(1);
 
-    var target = "http://localhost:9000";
-    var output = "public";
-    var server = utils.staticServer('test/fixtures/absolute-urls', 9000);
+    var port     = 9000;
+    var target   = 'http://localhost:' + port;
+    var output   = 'public';
+    var dir      = 'test/fixtures/absolute-urls';
+    var expected = 'test/fixtures/absolute-urls/expected.html';
+    var server   = utils.staticServer(dir, port);
 
     rmrf(output);
 
@@ -29,7 +31,7 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
 
         server.cleanup();
 
-        t.deepEqual(output.homeHtml, utils.file("test/fixtures/absolute-urls/expected.html"));
+        t.deepEqual(output.homeHtml, utils.file(expected));
         t.end();
     });
 });
