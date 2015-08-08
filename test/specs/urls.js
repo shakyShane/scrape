@@ -6,8 +6,6 @@ var test   = require('tape');
 
 test('Rewriting absolute URLs to local-root urls', function (t) {
 
-    t.plan(1);
-
     var port     = 9000;
     var target   = 'http://localhost:' + port;
     var output   = 'public';
@@ -25,13 +23,15 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
     }, function (err, output) {
 
         if (err) {
-
+            console.log('er');
             throw err;
         }
 
+        t.equal(output.tasks.length, 15, 'Return tasks should equal 15 as homepage does not count');
+
         server.cleanup();
 
-        //t.deepEqual(output.home.rewritten, utils.file(expected));
+        t.deepEqual(output.home.rewritten, utils.file(expected));
         t.end();
     });
 });

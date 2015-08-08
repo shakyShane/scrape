@@ -2,8 +2,10 @@ function concat (x, y) { return x.concat(y) }
 var Chrome   = require('chrome-remote-interface');
 var parse    = require('url').parse;
 var debug    = require('debug')('scrape');
+var resolve  = require('path').resolve;
 var write    = require('fs').writeFileSync;
 var read     = require('fs').readFileSync;
+var extname  = require('path').extname;
 var exists   = require('fs').existsSync;
 var basename = require('path').basename;
 var join     = require('path').join;
@@ -11,113 +13,164 @@ var utils    = require('./utils');
 var Rx       = require('rx');
 var items    = [];
 
-var dlText   = Rx.Observable.fromNodeCallback(utils.downloadText);
-var dlBin    = Rx.Observable.fromNodeCallback(utils.downloadBin);
-var dlOne    = Rx.Observable.fromNodeCallback(utils.downloadOne);
+var downloadTextItems   = Rx.Observable.fromNodeCallback(utils.downloadText);
+var downloadBinaryItems = Rx.Observable.fromNodeCallback(utils.downloadBin);
+var downloadTextItem    = Rx.Observable.fromNodeCallback(utils.downloadOne);
 
 module.exports = function (cli, config) {
 
     var target   = parse(cli.input[0]);
-    var pageload = false;
 
     Chrome(function (chrome) {
 
-        var obs = utils.asObservables(chrome);
+        var obs  = utils.chromeAsObservables(chrome);
+        var conf = { config: config, chrome: chrome };
 
         /**
          * Disable cache & clear cookies
          */
         chrome.Network.clearBrowserCache();
         chrome.Network.clearBrowserCookies();
-        chrome.Network.requestServedFromCache(function (res) {
-            debug('Served from cache:', res);
-        });
-
-        obs.incoming
-            .takeUntil(obs.pageLoaded)
-            .reduce((all, item) => all.concat(item), [])
-            .subscribe(function (reqs) {
-                console.log(reqs.length, 'requests were made before page load');
-            });
-
-        obs.incoming
-            .skipUntil(obs.pageLoaded)
-            .subscribe(function (req) {
-                console.log('a new req for:', req.url.href);
-                //console.log('REQ', req.url.href);
-            }, function (err) {
-                console.log(err);
-            }, function () {
-                console.log('done');
-            });
-        /**
-         * Handle incoming requests
-         */
-
-        //function incomingRequest (params) {
-        //
-        //    /**
-        //     * Always decorate incoming req object with parsed URL
-        //     * @type {number|*}
-        //     */
-        //    params.url = parse(params.request.url);
-        //    debug("REQ", basename(params.url.path), params.url.href);
-        //
-        //    /**
-        //     * If we're not done with initial page load yet, push
-        //     * this item into the 'later' stack
-        //     */
-        //    if (!pageload) {
-        //        items.push(params);
-        //    }
-        //}
+        chrome.Network.requestServedFromCache(res => debug('Served from cache:', res));
 
         /**
-         * Fired once when the page is ready
+         * Filter requests by type
+         * currently used extname, but could use mime types
+         * etc if this proves unreliable
+         * @param item
+         * @param type
+         * @param config
+         * @returns {boolean}
          */
-        //chrome.Page.loadEventFired(pageIsLoaded);
-        //
-        //function pageIsLoaded() {
-        //
-        //    /**
-        //     * Set the page load flag.
-        //     * This is to indicate that we have enough resources cached
-        //     * to build out the site
-        //     * @type {boolean}
-        //     */
-        //    if (!items.length) {
-        //        return;
-        //    }
-        //
-        //    pageload     = true;
-        //
-        //    var filtered = utils.filterRequests(items, config);
-        //    var conf     = { config: config, chrome: chrome };
-        //
-        //    /**
-        //     * Combine the download tasks of both the Text + Binary
-        //     * files into a single array
-        //     */
-        //    /**
-        //     * With the combined tasks from above, now download
-        //     * the homepage & apply the rewrites
-        //     */
-        //    var stream = Rx.Observable
-        //        .zip(dlText(filtered.text, conf), dlBin(filtered.bin, conf), concat)
-        //        .concatMap(function (tasks) {
-        //            return getHomepage(filtered.home[0], conf, tasks);
-        //        })
-        //        .subscribe(function (val) {
-        //            write(config.indexOutput, val.home.rewritten);
-        //            if (config.cb) {
-        //                config.cb(null, val);
-        //            }
-        //        }, function (err) {
-        //            config.cb(err);
-        //        }, function () {
-        //            console.log('DONE');
-        //        });
-        //}
+        function isType (item, type, config) {
+            return config.whitelist[type].indexOf(extname(item.url.pathname)) > -1;
+        }
+
+        /**
+         * Listen to incoming network requests
+         * and add a parsed url for later use.
+         * @returns {*}
+         */
+        function netreq () {
+            return obs.Network.requestWillBeSent
+                .map(req => {
+                    req.url = parse(req.request.url);
+                    return req;
+                });
+        }
+
+        /**
+         * Create a Download Observable
+         * that returns an array of items
+         * it downloaded
+         * @param type
+         * @param fn
+         */
+        function createDownloaderByType(type, fn) {
+            return netreq()
+                .takeUntil(obs.Page.loadEventFired)
+                .filter(x => isType(x, type, config))
+                .reduce((all, item) => all.concat(item), [])
+                .flatMap(items => {
+                    return fn(items, conf);
+                });
+        }
+
+        /**
+         * Create observables that are listening
+         * until the page load event is called.
+         * They each download either the text or binary files
+         * asked for and they each return the request obj used.
+         * @type {Observable.<R>}
+         */
+        var textRequests   = createDownloaderByType('text', downloadTextItems);
+        var binaryRequests = createDownloaderByType('bin', downloadBinaryItems);
+
+        /**
+         * Capture the single request that is the page
+         * given in config
+         */
+        var home = netreq()
+            .takeUntil(obs.Page.loadEventFired)
+            .filter(x => x.request.url === x.documentURL);
+
+        /**
+         * Merge the text and binary request streams to
+         * create a 'task' list that's used later to rewrite
+         * links in the HTML for the homepage
+         * @type {Rx.Observable<T>|Rx.Observable<Array>}
+         */
+        var tasks = Rx.Observable
+            .merge(textRequests, binaryRequests)
+            .reduce((all, item) => all.concat(item), []);
+
+        /**
+         * Combine the homepage request item with the merged
+         * tasks from above so that we can do some overwriting.
+         */
+        var initial = Rx.Observable.combineLatest(tasks, home, function (tasks, home) {
+            return {
+                tasks: tasks,
+                home: home
+            };
+        })
+        /**
+         * Now that we have all tasks + home page item,
+         * download the homepage and rewrite the links in it.
+         * Finish by constructing the Object that will be returned
+         * to the public interface
+         */
+        .flatMap(obj => downloadTextItem(obj.home, conf).map(getReturnObj(obj)));
+
+        /**
+         * Final handler. At this point:
+         * 1. All requests leading upto the homepage have been downloaded
+         * 2. The homepage HTML has been downloaded
+         * 3. The homepage HTML has been rewritten to change
+         *    remove scheme+domains
+         */
+
+        var writer = initial
+            .subscribe(
+                x => {
+                    write(resolve(x.config.prefix, 'index.html'), x.home.rewritten);
+                    config.cb(null, x);
+                },
+                config.cb // err handler
+            );
+
+        /**
+         * Constuct the Object that is returned to the public API
+         * @param obj
+         * @returns {Function}
+         */
+        function getReturnObj(obj) {
+            return function (html) {
+                return {
+                    config: config,
+                    chrome: conf.chrome,
+                    home: {
+                        original: html,
+                        rewritten: utils.applyTasks(html, obj.tasks),
+                        item: obj.home
+                    },
+                    tasks: obj.tasks,
+                    items: obj.tasks
+                }
+            }
+        }
+
+
+        //obs.incoming
+        //    .skipUntil(obs.pageLoaded)
+        //    .subscribe(function (req) {
+        //        console.log('a new req for:', req.url.href);
+        //        //console.log('REQ', req.url.href);
+        //    }, function (err) {
+        //        console.log(err);
+        //    }, function () {
+        //        console.log('done');
+        //    });
 
         /**
          * Kick off
@@ -132,27 +185,3 @@ module.exports = function (cli, config) {
         console.error('Cannot connect to Chrome');
     });
 };
-
-/**
- * Download the original document url & rewrite any links
- * present in the markup to be absolute paths instead
- * @param item
- * @param conf
- * @param tasks
- * @returns {*}
- */
-function getHomepage (item, conf, tasks) {
-    return dlOne(item, conf)
-        .map(function (html) {
-            return {
-                chrome: conf.chrome,
-                home: {
-                    original: html,
-                    rewritten: utils.applyTasks(html, tasks),
-                    item: item
-                },
-                tasks: tasks,
-                items: tasks
-            }
-        });
-}
