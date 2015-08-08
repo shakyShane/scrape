@@ -1,17 +1,26 @@
 var Rx = require('rx');
 var json = require('./out.json');
 var shane = true;
-var int = Rx.Observable.interval(100);
+var running = false;
+
+var obs = Rx.Observable.create(function (obs) {
+    setTimeout(function () {
+        obs.onCompleted();
+    }, 2000);
+});
 
 var source = Rx.Observable
-    .fromArray(json.text)
-    .map(function (item) {
-        return slow(item);
-    })
-    .subscribe(function (val) {
-        console.log('value', val);
-    }, function (err) {
-        console.log(err);
-    }, function (values, va) {
-        console.log('END');
-    });
+    .interval(500)
+    .takeUntil(obs)
+    .subscribe(
+        function (x) {
+            console.log('Value:', x);
+        },
+        function (err) {
+            console.log('Error: ' + err);
+        },
+        function () {
+            console.log('Completed');
+        }
+);
+

@@ -1,25 +1,23 @@
-function concat(x, y) {
-    return x.concat(y);
-}
-var Chrome = require('chrome-remote-interface');
-var parse = require('url').parse;
-var debug = require('debug')('scrape');
-var write = require('fs').writeFileSync;
-var read = require('fs').readFileSync;
-var exists = require('fs').existsSync;
+function concat (x, y) { return x.concat(y) }
+var Chrome   = require('chrome-remote-interface');
+var parse    = require('url').parse;
+var debug    = require('debug')('scrape');
+var write    = require('fs').writeFileSync;
+var read     = require('fs').readFileSync;
+var exists   = require('fs').existsSync;
 var basename = require('path').basename;
-var join = require('path').join;
-var utils = require('./utils');
-var Rx = require('rx');
-var items = [];
+var join     = require('path').join;
+var utils    = require('./utils');
+var Rx       = require('rx');
+var items    = [];
 
-var dlText = Rx.Observable.fromNodeCallback(utils.downloadText);
-var dlBin = Rx.Observable.fromNodeCallback(utils.downloadBin);
-var dlOne = Rx.Observable.fromNodeCallback(utils.downloadOne);
+var dlText   = Rx.Observable.fromNodeCallback(utils.downloadText);
+var dlBin    = Rx.Observable.fromNodeCallback(utils.downloadBin);
+var dlOne    = Rx.Observable.fromNodeCallback(utils.downloadOne);
 
 module.exports = function (cli, config) {
 
-    var target = parse(cli.input[0]);
+    var target   = parse(cli.input[0]);
     var pageload = false;
 
     Chrome(function (chrome) {
@@ -35,20 +33,23 @@ module.exports = function (cli, config) {
             debug('Served from cache:', res);
         });
 
-        obs.incoming.takeUntil(obs.pageLoaded).reduce(function (all, item) {
-            return all.concat(item);
-        }, []).subscribe(function (reqs) {
-            console.log(reqs.length, 'requests were made before page load');
-        });
+        obs.incoming
+            .takeUntil(obs.pageLoaded)
+            .reduce((all, item) => all.concat(item), [])
+            .subscribe(function (reqs) {
+                console.log(reqs.length, 'requests were made before page load');
+            });
 
-        obs.incoming.skipUntil(obs.pageLoaded).subscribe(function (req) {
-            console.log('a new req for:', req.url.href);
-            //console.log('REQ', req.url.href);
-        }, function (err) {
-            console.log(err);
-        }, function () {
-            console.log('done');
-        });
+        obs.incoming
+            .skipUntil(obs.pageLoaded)
+            .subscribe(function (req) {
+                console.log('a new req for:', req.url.href);
+                //console.log('REQ', req.url.href);
+            }, function (err) {
+                console.log(err);
+            }, function () {
+                console.log('done');
+            });
         /**
          * Handle incoming requests
          */
@@ -124,8 +125,9 @@ module.exports = function (cli, config) {
         chrome.Network.enable();
         chrome.Page.enable();
         chrome.once('ready', function () {
-            chrome.Page.navigate({ 'url': target.href });
+            chrome.Page.navigate({'url': target.href});
         });
+
     }).on('error', function () {
         console.error('Cannot connect to Chrome');
     });
@@ -139,17 +141,18 @@ module.exports = function (cli, config) {
  * @param tasks
  * @returns {*}
  */
-function getHomepage(item, conf, tasks) {
-    return dlOne(item, conf).map(function (html) {
-        return {
-            chrome: conf.chrome,
-            home: {
-                original: html,
-                rewritten: utils.applyTasks(html, tasks),
-                item: item
-            },
-            tasks: tasks,
-            items: tasks
-        };
-    });
+function getHomepage (item, conf, tasks) {
+    return dlOne(item, conf)
+        .map(function (html) {
+            return {
+                chrome: conf.chrome,
+                home: {
+                    original: html,
+                    rewritten: utils.applyTasks(html, tasks),
+                    item: item
+                },
+                tasks: tasks,
+                items: tasks
+            }
+        });
 }

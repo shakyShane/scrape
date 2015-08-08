@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape 'test/specs/**/*'"
+    "test": "tape 'test/specs/**/*'",
+    "es6": "babel src --out-dir lib --blacklist useStrict",
+    "es6-watch": "babel src --out-dir lib --blacklist useStrict --watch"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,7 @@
     "rimraf": "^2.4.2"
   },
   "devDependencies": {
+    "babel": "^5.8.21",
     "browser-sync": "^2.8.2",
     "download": "^4.2.0",
     "express": "^4.13.3",

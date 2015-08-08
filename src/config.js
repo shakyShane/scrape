@@ -1,6 +1,6 @@
-var resolve = require('path').resolve;
-var join = require('path').join;
-var conf = {};
+var resolve  = require('path').resolve;
+var join     = require('path').join;
+var conf     = {};
 
 conf.prefix = 'public';
 
@@ -16,4 +16,9 @@ module.exports = function (cli, opts) {
     return conf;
 };
 
-module.exports.merge = function (cli, opts) {};
+module.exports.merge = function (cli, opts) {
+
+};
+
+
+

@@ -1,17 +1,17 @@
-var write = require('fs').writeFileSync;
-var read = require('fs').readFileSync;
-var exists = require('fs').existsSync;
-var parse = require('url').parse;
-var resolve = require('path').resolve;
+var write    = require('fs').writeFileSync;
+var read     = require('fs').readFileSync;
+var exists   = require('fs').existsSync;
+var parse    = require('url').parse;
+var resolve  = require('path').resolve;
 var basename = require('path').basename;
-var dirname = require('path').dirname;
-var extname = require('path').extname;
-var mkdirp = require('mkdirp').sync;
-var rmrf = require('rimraf').sync;
-var join = require('path').join;
-var debug = require('debug')('scrape');
-var Rx = require('rx');
-var utils = exports;
+var dirname  = require('path').dirname;
+var extname  = require('path').extname;
+var mkdirp   = require('mkdirp').sync;
+var rmrf     = require('rimraf').sync;
+var join     = require('path').join;
+var debug    = require('debug')('scrape');
+var Rx       = require('rx');
+var utils    = exports;
 
 /**
  * @param {Array} items
@@ -35,7 +35,7 @@ utils.filterRequests = function (items, config) {
             all.bin.push(item);
         }
         return all;
-    }, { text: [], bin: [], home: [] });
+    }, {text: [], bin: [], home: []});
 };
 
 /**
@@ -70,9 +70,9 @@ utils.applyTasks = function (input, tasks) {
  */
 utils.downloadBin = function (items, opts, cb) {
 
-    cb = cb || function () {};
+    cb           = cb || function () {};
     var Download = require('download');
-    var dl = new Download({ mode: '755' });
+    var dl       = new Download({mode: '755'});
     items.forEach(function (item) {
         debug("DL bin:", extname(item.request.url), basename(item.request.url));
         dl.get(item.request.url, join(process.cwd(), opts.config.prefix, dirname(item.url.pathname)));
@@ -94,14 +94,14 @@ utils.downloadBin = function (items, opts, cb) {
  */
 utils.downloadText = function (items, opts, cb) {
 
-    var count = 0;
-    cb = cb || function () {};
-    var len = items.length;
+    var count        = 0;
+    cb               = cb || function () {};
+    var len          = items.length;
     var rewriteTasks = [];
 
     items.forEach(function (item) {
 
-        var output = resolve(opts.config.prefix, item.url.pathname.slice(1));
+        var output   = resolve(opts.config.prefix, item.url.pathname.slice(1));
         var _dirname = dirname(output);
         mkdirp(_dirname);
 
@@ -113,7 +113,10 @@ utils.downloadText = function (items, opts, cb) {
 
             // Write the file to disk
             if (resp.base64Encoded) {
-                write(output, new Buffer(resp.body, 'base64').toString('ascii'));
+                write(
+                    output,
+                    new Buffer(resp.body, 'base64').toString('ascii')
+                );
             } else {
                 write(output, resp.body);
             }
@@ -151,7 +154,7 @@ utils.asObservables = function (chrome) {
         chrome.Network.requestWillBeSent(function (params) {
             obs.onNext(params);
         });
-    }).map(function (req) {
+    }).map(req => {
         req.url = parse(req.request.url);
         return req;
     });
@@ -159,5 +162,5 @@ utils.asObservables = function (chrome) {
     return {
         pageLoaded: Rx.Observable.fromCallback(chrome.Page.loadEventFired)(),
         incoming: incoming
-    };
+    }
 };
