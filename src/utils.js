@@ -46,7 +46,7 @@ utils.applyTasks = function (input, tasks) {
  */
 utils.downloadItemsAndWrite = function (items, opts, cb) {
 
-    cb           = cb || function () {};
+    cb = cb || function () {};
 
     if (!Array.isArray(items)) {
         items = [items];

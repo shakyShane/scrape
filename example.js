@@ -1,7 +1,9 @@
 var scrape = require('./');
-var bs = require('browser-sync').create();
+var bs     = require('browser-sync').create();
+var rmrf   = require('rimraf').sync;
+rmrf('public');
 
-scrape({input: ["http://www.bbc.co.uk"]}, function (err, output) {
+scrape({input: ["http://www.sunspel.com/uk/womens/new-collection.html"]}, function (err, output) {
     bs.init({
         server: output.config.prefix,
         files: output.config.prefix

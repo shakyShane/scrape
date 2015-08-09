@@ -77,6 +77,10 @@ module.exports = function (cli, config) {
         /**
          * Listen to network requests
          */
+        var afterPageLoad = netreq()
+            .skipUntil(obs.Page.loadEventFired)
+            .filter(x => isValidType(x, config.whitelist));
+
         var beforePageLoad = netreq()
             /**
              * Take them until the page load event
@@ -122,13 +126,27 @@ module.exports = function (cli, config) {
 
 
         /**
-         * Kick off the stream
+         * All requests before page load event
          */
         beforePageLoad.subscribe(
             x => {
-                config.cb(null, x);
+                console.log('Before page load done');
+                //config.cb(null, x);
             },
             config.cb // err handler
+        );
+
+        /**
+         * All requests after the page load event
+         */
+        afterPageLoad.subscribe(
+            x => {
+                console.log('req after page load', x.request.url);
+            },
+            config.cb, // err handler
+            function () {
+                console.log('DONE');
+            }
         );
 
         /**
