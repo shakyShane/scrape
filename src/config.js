@@ -4,10 +4,10 @@ var conf     = {};
 
 conf.prefix = 'public';
 
-conf.whitelist = {
-    text: [".js", ".css", ".svg", ".html"],
-    bin: [".png", ".jpg", ".jpeg", ".gif", ".woff", ".woff2"]
-};
+conf.whitelist = [
+    ".js", ".css", ".svg", ".html",
+    ".png", ".jpg", ".jpeg", ".gif", ".woff", ".woff2"
+];
 
 conf.cwd = process.cwd();
 conf.indexOutput = join(conf.cwd, conf.prefix, 'index.html');

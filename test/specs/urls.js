@@ -11,6 +11,7 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
     var output   = 'public';
     var dir      = 'test/fixtures/absolute-urls';
     var expected = 'test/fixtures/absolute-urls/expected.html';
+    var outIndex = 'public/index.html';
     var server   = utils.staticServer(dir, port);
 
     rmrf(output);
@@ -32,6 +33,7 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
         server.cleanup();
 
         t.deepEqual(output.home.rewritten, utils.file(expected));
+        t.deepEqual(output.home.rewritten, utils.file(outIndex));
         t.end();
     });
 });

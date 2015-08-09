@@ -1,3 +1,4 @@
+var Download = require('download');
 var write    = require('fs').writeFileSync;
 var read     = require('fs').readFileSync;
 var exists   = require('fs').existsSync;
@@ -43,21 +44,27 @@ utils.applyTasks = function (input, tasks) {
  * @param {Object} config
  * @param {Function} cb
  */
-utils.downloadBin = function (items, opts, cb) {
+utils.downloadItemsAndWrite = function (items, opts, cb) {
 
     cb           = cb || function () {};
-    var Download = require('download');
+
+    if (!Array.isArray(items)) {
+        items = [items];
+    }
+
     var dl       = new Download({mode: '755'});
+
     items.forEach(function (item) {
-        debug("DL bin:", extname(item.request.url), basename(item.request.url));
-        dl.get(item.request.url, join(process.cwd(), opts.config.prefix, dirname(item.url.pathname)));
+        var url = item.request.url;
+        debug("DL:", extname(url), basename(url));
+        dl.get(url, join(process.cwd(), opts.config.prefix, dirname(item.url.pathname)));
     });
 
-    dl.run(function (err) {
+    dl.run(function (err, files) {
         if (err) {
             return cb(err);
         }
-        cb(null, items);
+        cb(null, files);
     });
 };
 
@@ -67,57 +74,20 @@ utils.downloadBin = function (items, opts, cb) {
  * @param {Chrome} chrome
  * @param {Function} cb
  */
-utils.downloadText = function (items, opts, cb) {
+utils.downloadItems = function (items, opts, cb) {
 
-    var count        = 0;
-    cb               = cb || function () {};
-    var len          = items.length;
-    var rewriteTasks = [];
+    cb     = cb || function () {};
+    var dl = new Download({mode: '755'});
 
     items.forEach(function (item) {
-
-        var output   = resolve(opts.config.prefix, item.url.pathname.slice(1));
-        var _dirname = dirname(output);
-        mkdirp(_dirname);
-
-        opts.chrome.Network.getResponseBody(item, function (err, resp) {
-
-            if (err) {
-                return cb(err);
-            }
-
-            // Write the file to disk
-            if (resp.base64Encoded) {
-                write(
-                    output,
-                    new Buffer(resp.body, 'base64').toString('ascii')
-                );
-            } else {
-                write(output, resp.body);
-            }
-
-            rewriteTasks.push(item);
-
-            debug('DL txt:', extname(output), basename(output));
-
-            count += 1;
-            if (count === len) {
-                cb(null, rewriteTasks);
-            }
-        });
+        dl.get(item.request.url);
     });
-};
 
-/**
- * @param {Object} opts
- * @param {Function} cb
- */
-utils.downloadOne = function (item, opts, cb) {
-    opts.chrome.Network.getResponseBody(item, function (err, resp) {
+    dl.run(function (err, files) {
         if (err) {
             return cb(err);
         }
-        cb(null, resp.body);
+        cb(null, files);
     });
 };
 

@@ -13,13 +13,18 @@ var utils    = require('./utils');
 var Rx       = require('rx');
 var items    = [];
 
-var downloadTextItems   = Rx.Observable.fromNodeCallback(utils.downloadText);
-var downloadBinaryItems = Rx.Observable.fromNodeCallback(utils.downloadBin);
-var downloadTextItem    = Rx.Observable.fromNodeCallback(utils.downloadOne);
+var downloadItems   = Rx.Observable.fromNodeCallback(utils.downloadItems);
+var downloadItemsAndWrite = Rx.Observable.fromNodeCallback(utils.downloadItemsAndWrite);
 
 module.exports = function (cli, config) {
 
     var target   = parse(cli.input[0]);
+    var homeItem = {
+        url: target,
+        request: {
+            url: target.href
+        }
+    };
 
     Chrome(function (chrome) {
 
@@ -42,8 +47,8 @@ module.exports = function (cli, config) {
          * @param config
          * @returns {boolean}
          */
-        function isType (item, type, config) {
-            return config.whitelist[type].indexOf(extname(item.url.pathname)) > -1;
+        function isValidType (item, whitelist) {
+            return whitelist.indexOf(extname(item.url.pathname)) > -1;
         }
 
         /**
@@ -60,67 +65,53 @@ module.exports = function (cli, config) {
         }
 
         /**
-         * Create a Download Observable
-         * that returns an array of items
-         * it downloaded
-         * @param type
-         * @param fn
+         * Download a single file & extract it's content only
+         * @param item
+         * @returns {*}
          */
-        function createDownloaderByType(type, fn) {
-            return netreq()
-                .takeUntil(obs.Page.loadEventFired)
-                .filter(x => isType(x, type, config))
-                .reduce((all, item) => all.concat(item), [])
-                .flatMap(items => {
-                    return fn(items, conf);
-                });
+        function singleFileContents (item) {
+            return downloadItems([item], conf)
+                .map(x => x[0]._contents.toString())
         }
-
-        /**
-         * Create observables that are listening
-         * until the page load event is called.
-         * They each download either the text or binary files
-         * asked for and they each return the request obj used.
-         * @type {Observable.<R>}
-         */
-        var textRequests   = createDownloaderByType('text', downloadTextItems);
-        var binaryRequests = createDownloaderByType('bin', downloadBinaryItems);
-
-        /**
-         * Capture the single request that is the page
-         * given in config
-         */
-        var home = netreq()
-            .takeUntil(obs.Page.loadEventFired)
-            .filter(x => x.request.url === x.documentURL);
 
         /**
          * Merge the text and binary request streams to
          * create a 'task' list that's used later to rewrite
          * links in the HTML for the homepage
-         * @type {Rx.Observable<T>|Rx.Observable<Array>}
          */
-        var tasks = Rx.Observable
-            .merge(textRequests, binaryRequests)
-            .reduce((all, item) => all.concat(item), []);
-
-        /**
-         * Combine the homepage request item with the merged
-         * tasks from above so that we can do some overwriting.
-         */
-        var initial = Rx.Observable.combineLatest(tasks, home, function (tasks, home) {
-            return {
-                tasks: tasks,
-                home: home
-            };
-        })
-        /**
-         * Now that we have all tasks + home page item,
-         * download the homepage and rewrite the links in it.
-         * Finish by constructing the Object that will be returned
-         * to the public interface
-         */
-        .flatMap(obj => downloadTextItem(obj.home, conf).map(getReturnObj(obj)));
+        netreq()
+            .takeUntil(obs.Page.loadEventFired)
+            .filter(x => isValidType(x, config.whitelist))
+            .reduce((all, item) => all.concat(item), [])
+            .flatMap(tasks => {
+                return downloadItemsAndWrite(tasks, conf)
+                    .map(files => {
+                        return {
+                            files: files,
+                            tasks: tasks
+                        }
+                    });
+            })
+            /**
+             * Now that we have all tasks + home page item,
+             * download the homepage and rewrite the links in it.
+             * Finish by constructing the Object that will be returned
+             * to the public interface
+             */
+            .flatMap(obj => {
+                return singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem}));
+            })
+            .map(x => {
+                write(resolve(config.prefix, 'index.html'), x.home.rewritten);
+                return x;
+            })
+            .subscribe(
+                x => {
+                    console.log(x.home);
+                    config.cb(null, x);
+                },
+                config.cb // err handler
+            );
 
         /**
          * Final handler. At this point:
@@ -130,14 +121,6 @@ module.exports = function (cli, config) {
          *    remove scheme+domains
          */
 
-        var writer = initial
-            .subscribe(
-                x => {
-                    write(resolve(x.config.prefix, 'index.html'), x.home.rewritten);
-                    config.cb(null, x);
-                },
-                config.cb // err handler
-            );
 
         /**
          * Constuct the Object that is returned to the public API
@@ -148,11 +131,12 @@ module.exports = function (cli, config) {
             return function (html) {
                 return {
                     config: config,
+                    files: obj.files,
                     chrome: conf.chrome,
                     home: {
                         original: html,
                         rewritten: utils.applyTasks(html, obj.tasks),
-                        item: obj.home
+                        item: obj.homeItem
                     },
                     tasks: obj.tasks,
                     items: obj.tasks
