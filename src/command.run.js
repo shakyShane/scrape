@@ -12,9 +12,9 @@ var join     = require('path').join;
 var utils    = require('./utils');
 var Rx       = require('rx');
 var items    = [];
-
 var downloadItems   = Rx.Observable.fromNodeCallback(utils.downloadItems);
 var downloadItemsAndWrite = Rx.Observable.fromNodeCallback(utils.downloadItemsAndWrite);
+var writeFile      = Rx.Observable.fromNodeCallback(require('fs').writeFile);
 
 module.exports = function (cli, config) {
 
@@ -75,14 +75,26 @@ module.exports = function (cli, config) {
         }
 
         /**
-         * Merge the text and binary request streams to
-         * create a 'task' list that's used later to rewrite
-         * links in the HTML for the homepage
+         * Listen to network requests
          */
-        netreq()
+        var beforePageLoad = netreq()
+            /**
+             * Take them until the page load event
+             */
             .takeUntil(obs.Page.loadEventFired)
+            /**
+             * Filter to include only the files in the
+             * config whitelist
+             */
             .filter(x => isValidType(x, config.whitelist))
+            /**
+             * Aggregate all to a flat array
+             */
             .reduce((all, item) => all.concat(item), [])
+            /**
+             * Take the aggregated tasks and download each file
+             * Return the tasks along with the vinyl objects
+             */
             .flatMap(tasks => {
                 return downloadItemsAndWrite(tasks, conf)
                     .map(files => {
@@ -93,34 +105,31 @@ module.exports = function (cli, config) {
                     });
             })
             /**
-             * Now that we have all tasks + home page item,
-             * download the homepage and rewrite the links in it.
-             * Finish by constructing the Object that will be returned
-             * to the public interface
+             * Now that all files are downloaded, we can fetch the markup
+             * for the homepage and rewrite the links in it.
+             * Finish by constructing the Object with the tasks, files and homepage
+             * markup
              */
-            .flatMap(obj => {
-                return singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem}));
-            })
-            .map(x => {
-                write(resolve(config.prefix, 'index.html'), x.home.rewritten);
-                return x;
-            })
-            .subscribe(
-                x => {
-                    console.log(x.home);
-                    config.cb(null, x);
-                },
-                config.cb // err handler
-            );
+            .flatMap(obj => singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem})))
+            /**
+             * Final handler. At this point:
+             * 1. All requests leading upto the homepage have been downloaded
+             * 2. The homepage HTML has been downloaded
+             * 3. The homepage HTML has been rewritten to change
+             *    remove scheme+domains
+             */
+            .flatMap(x => writeFile(resolve(config.prefix, 'index.html'), x.home.rewritten).map(done => x));
+
 
         /**
-         * Final handler. At this point:
-         * 1. All requests leading upto the homepage have been downloaded
-         * 2. The homepage HTML has been downloaded
-         * 3. The homepage HTML has been rewritten to change
-         *    remove scheme+domains
+         * Kick off the stream
          */
-
+        beforePageLoad.subscribe(
+            x => {
+                config.cb(null, x);
+            },
+            config.cb // err handler
+        );
 
         /**
          * Constuct the Object that is returned to the public API
