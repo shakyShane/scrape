@@ -12,9 +12,10 @@ var join     = require('path').join;
 var utils    = require('./utils');
 var Rx       = require('rx');
 var items    = [];
-var downloadItems   = Rx.Observable.fromNodeCallback(utils.downloadItems);
-var downloadItemsAndWrite = Rx.Observable.fromNodeCallback(utils.downloadItemsAndWrite);
-var writeFile      = Rx.Observable.fromNodeCallback(require('fs').writeFile);
+
+var downloadItems           = Rx.Observable.fromNodeCallback(utils.downloadItems);
+var downloadItemsAndWrite   = Rx.Observable.fromNodeCallback(utils.downloadItemsAndWrite);
+var writeFile               = Rx.Observable.fromNodeCallback(require('fs').writeFile);
 
 module.exports = function (cli, config) {
 
@@ -39,24 +40,11 @@ module.exports = function (cli, config) {
         chrome.Network.requestServedFromCache(res => debug('Served from cache:', res));
 
         /**
-         * Filter requests by type
-         * currently used extname, but could use mime types
-         * etc if this proves unreliable
-         * @param item
-         * @param type
-         * @param config
-         * @returns {boolean}
-         */
-        function isValidType (item, whitelist) {
-            return whitelist.indexOf(extname(item.url.pathname)) > -1;
-        }
-
-        /**
          * Listen to incoming network requests
          * and add a parsed url for later use.
          * @returns {*}
          */
-        function netreq () {
+        function requestStream () {
             return obs.Network.requestWillBeSent
                 .map(req => {
                     req.url = parse(req.request.url);
@@ -70,18 +58,23 @@ module.exports = function (cli, config) {
          * @returns {*}
          */
         function singleFileContents (item) {
-            return downloadItems([item], conf)
+            return downloadItems([item])
                 .map(x => x[0]._contents.toString())
         }
 
         /**
-         * Listen to network requests
+         * Get the timeout that runs after the page is loaded
+         * and collects the extra requests
+         * @returns {*}
          */
-        var afterPageLoad = netreq()
-            .skipUntil(obs.Page.loadEventFired)
-            .filter(x => isValidType(x, config.whitelist));
+        function afterPageLoadTimeout () {
+            return obs.Page.loadEventFired.concat(Rx.Observable.defer(() => Rx.Observable.timer(config.afterPageLoadTimeout))).skip(1);
+        }
 
-        var beforePageLoad = netreq()
+        /**
+         * Before Page load events
+         */
+        requestStream()
             /**
              * Take them until the page load event
              */
@@ -90,17 +83,23 @@ module.exports = function (cli, config) {
              * Filter to include only the files in the
              * config whitelist
              */
-            .filter(x => isValidType(x, config.whitelist))
+            .filter(x => utils.isValidType(x, config.whitelist))
+            .filter(x => !utils.isExcludedHost(x, config.hostBlacklist))
             /**
              * Aggregate all to a flat array
              */
             .reduce((all, item) => all.concat(item), [])
             /**
+             * User info logging
+             */
+            .do(x => console.log('=== Page load event fired ==='))
+            .do(x => console.log('=== Waiting for a further ' + config.afterPageLoadTimeout + 'ms before exiting ==='))
+            /**
              * Take the aggregated tasks and download each file
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks, conf)
+                return downloadItemsAndWrite(tasks, config.output.dir)
                     .map(files => {
                         return {
                             files: files,
@@ -122,30 +121,30 @@ module.exports = function (cli, config) {
              * 3. The homepage HTML has been rewritten to change
              *    remove scheme+domains
              */
-            .flatMap(x => writeFile(resolve(config.prefix, 'index.html'), x.home.rewritten).map(done => x));
-
-
-        /**
-         * All requests before page load event
-         */
-        beforePageLoad.subscribe(
-            x => {
-                console.log('Before page load done');
-                //config.cb(null, x);
-            },
-            config.cb // err handler
-        );
+            .flatMap(x => writeFile(resolve(config.prefix, 'index.html'), x.home.rewritten).map(done => x))
+            .subscribe(
+                x => {
+                    console.log('=== Files Downloaded & HTML rewritten ===');
+                },
+                (err) => {
+                    console.error(err.message)
+                }
+            );
 
         /**
-         * All requests after the page load event
+         * After page loaded request events
          */
-        afterPageLoad.subscribe(
-            x => {
-                console.log('req after page load', x.request.url);
+        requestStream()
+            .skipUntil(obs.Page.loadEventFired)
+            .takeUntil(afterPageLoadTimeout())
+            .reduce((all, item) => all.concat(item), [])
+            .subscribe(x => {
+                debug('>>> number of reqs after page load:', x.length);
+                console.log('=== DONE now With after page-load requests');
+                config.cb(null, x);
             },
-            config.cb, // err handler
-            function () {
-                console.log('DONE');
+            (err) => {
+                console.error(err.message)
             }
         );
 
@@ -160,28 +159,16 @@ module.exports = function (cli, config) {
                     config: config,
                     files: obj.files,
                     chrome: conf.chrome,
-                    home: {
-                        original: html,
+                    home:   {
+                        original:html,
                         rewritten: utils.applyTasks(html, obj.tasks),
                         item: obj.homeItem
                     },
-                    tasks: obj.tasks,
-                    items: obj.tasks
+                    tasks:  obj.tasks,
+                    items:  obj.tasks
                 }
             }
         }
-
-
-        //obs.incoming
-        //    .skipUntil(obs.pageLoaded)
-        //    .subscribe(function (req) {
-        //        console.log('a new req for:', req.url.href);
-        //        //console.log('REQ', req.url.href);
-        //    }, function (err) {
-        //        console.log(err);
-        //    }, function () {
-        //        console.log('done');
-        //    });
 
         /**
          * Kick off
