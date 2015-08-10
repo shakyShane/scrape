@@ -28,13 +28,12 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
             throw err;
         }
 
-        console.log(output.files.length);
-        t.equal(output.tasks.length, 15, 'Return tasks should equal 15 as homepage does not count');
+        t.equal(output.before.tasks.length, 15, 'Return tasks should equal 15 as homepage does not count');
 
         server.cleanup();
 
-        t.deepEqual(output.home.rewritten, utils.file(expected));
-        t.deepEqual(output.home.rewritten, utils.file(outIndex));
+        t.deepEqual(output.before.home.rewritten, utils.file(expected));
+        t.deepEqual(output.before.home.rewritten, utils.file(outIndex));
         t.end();
     });
 });

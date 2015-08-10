@@ -30,7 +30,6 @@ module.exports = function (cli, config) {
     Chrome(function (chrome) {
 
         var obs  = utils.chromeAsObservables(chrome);
-        var conf = { config: config, chrome: chrome };
 
         /**
          * Disable cache & clear cookies
@@ -68,13 +67,13 @@ module.exports = function (cli, config) {
          * @returns {*}
          */
         function afterPageLoadTimeout () {
-            return obs.Page.loadEventFired.concat(Rx.Observable.defer(() => Rx.Observable.timer(config.afterPageLoadTimeout))).skip(1);
+            return obs.Page.loadEventFired.concat(Rx.Observable.defer(() => Rx.Observable.timer(config.get('afterPageLoadTimeout')))).skip(1);
         }
 
         /**
          * Before Page load events
          */
-        requestStream()
+        var beforePageLoad = requestStream()
             /**
              * Take them until the page load event
              */
@@ -83,8 +82,8 @@ module.exports = function (cli, config) {
              * Filter to include only the files in the
              * config whitelist
              */
-            .filter(x => utils.isValidType(x, config.whitelist))
-            .filter(x => !utils.isExcludedHost(x, config.hostBlacklist))
+            .filter(x => utils.isValidType(x, config.get('whitelist')))
+            .filter(x => !utils.isExcludedHost(x, config.get('hostBlacklist')))
             /**
              * Aggregate all to a flat array
              */
@@ -93,13 +92,13 @@ module.exports = function (cli, config) {
              * User info logging
              */
             .do(x => console.log('=== Page load event fired ==='))
-            .do(x => console.log('=== Waiting for a further ' + config.afterPageLoadTimeout + 'ms before exiting ==='))
+            .do(x => console.log('=== Waiting for a further ' + config.get('afterPageLoadTimeout') + 'ms before exiting ==='))
             /**
              * Take the aggregated tasks and download each file
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks, config.output.dir)
+                return downloadItemsAndWrite(tasks, config.getIn(['output', 'dir']))
                     .map(files => {
                         return {
                             files: files,
@@ -121,32 +120,33 @@ module.exports = function (cli, config) {
              * 3. The homepage HTML has been rewritten to change
              *    remove scheme+domains
              */
-            .flatMap(x => writeFile(resolve(config.prefix, 'index.html'), x.home.rewritten).map(done => x))
-            .subscribe(
-                x => {
-                    console.log('=== Files Downloaded & HTML rewritten ===');
-                },
-                (err) => {
-                    console.error(err.message)
-                }
-            );
+            .flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x));
 
         /**
          * After page loaded request events
          */
-        requestStream()
+        var afterPageLoad = requestStream()
             .skipUntil(obs.Page.loadEventFired)
             .takeUntil(afterPageLoadTimeout())
-            .reduce((all, item) => all.concat(item), [])
-            .subscribe(x => {
-                debug('>>> number of reqs after page load:', x.length);
-                console.log('=== DONE now With after page-load requests');
-                config.cb(null, x);
-            },
-            (err) => {
-                console.error(err.message)
-            }
-        );
+            .reduce((all, item) => all.concat(item), []);
+
+        /**
+         * Now zip both before and after events
+         */
+        Rx.Observable
+            .zip(beforePageLoad, afterPageLoad, (before, after) => {
+                return {before, after}
+            })
+            .subscribe(
+                (x) => {
+                    console.log('>>> number of req after page load:', x.after.length);
+                    config.get('cb')(null, x);
+                },
+                (err) => {
+                    console.log(err.message);
+                    //console.error(err.message)
+                }
+            );
 
         /**
          * Constuct the Object that is returned to the public API
@@ -158,7 +158,7 @@ module.exports = function (cli, config) {
                 return {
                     config: config,
                     files: obj.files,
-                    chrome: conf.chrome,
+                    //chrome: conf.chrome,
                     home:   {
                         original:html,
                         rewritten: utils.applyTasks(html, obj.tasks),

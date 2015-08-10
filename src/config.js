@@ -1,6 +1,7 @@
 var resolve  = require('path').resolve;
 var join     = require('path').join;
 var conf     = {};
+var Immutable = require('immutable');
 
 conf.prefix = 'public';
 
