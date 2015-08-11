@@ -7,7 +7,7 @@ conf.prefix = 'public';
 
 conf.whitelist = [
     ".js", ".css", ".svg", ".html",
-    ".png", ".jpg", ".jpeg", ".gif", ".woff", ".woff2"
+    ".png", ".jpg", ".jpeg", ".gif", ".woff", ".woff2", ".json"
 ];
 
 conf.hostBlacklist = [];
@@ -19,8 +19,10 @@ conf.output = {
     dir: join(conf.cwd, conf.prefix)
 };
 
-module.exports = function (cli, opts) {
-    return conf;
+module.exports = function (flags) {
+    return Immutable
+        .fromJS(conf)
+        .mergeDeep(flags);
 };
 
 module.exports.merge = function (cli, opts) {

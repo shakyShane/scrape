@@ -3,7 +3,7 @@ var bs     = require('browser-sync').create();
 var rmrf   = require('rimraf').sync;
 rmrf('public');
 
-scrape({input: ["http://www.browsersync.io"]}, function (err, output) {
+scrape({input: ["http://swannodette.github.io/2015/07/29/clojurescript-17/"]}, function (err, output) {
     console.log(output.after);
     //console.log(output);
     //console.log(output)
