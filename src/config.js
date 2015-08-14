@@ -12,6 +12,7 @@ conf.whitelist = [
 
 conf.hostBlacklist = [];
 conf.afterPageLoadTimeout = 2000;
+conf.flat = false;
 conf.cwd = process.cwd();
 conf.indexOutput = join(conf.cwd, conf.prefix, 'index.html');
 
