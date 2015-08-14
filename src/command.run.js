@@ -87,7 +87,7 @@ module.exports = function (cli, config) {
             /**
              * Aggregate all to a flat array
              */
-            .reduce((all, item) => all.concat(item), [])
+            .toArray()
             /**
              * User info logging
              */
@@ -98,7 +98,7 @@ module.exports = function (cli, config) {
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks, config.getIn(['output', 'dir']))
+                return downloadItemsAndWrite(tasks, config.get('outputDir'))
                     .map(files => {
                         return {
                             files: files,
@@ -128,7 +128,7 @@ module.exports = function (cli, config) {
         var afterPageLoad = requestStream()
             .skipUntil(obs.Page.loadEventFired)
             .takeUntil(afterPageLoadTimeout())
-            .reduce((all, item) => all.concat(item), []);
+            .toArray();
 
         /**
          * Now zip both before and after events
@@ -138,13 +138,22 @@ module.exports = function (cli, config) {
                 return {before, after}
             })
             .subscribe(
-                (x) => {
-                    console.log('>>> number of req after page load:', x.after.length);
-                    config.get('cb')(null, x);
+                x => {
+                    console.log('>>> number of req BEFORE page load:', x.before.tasks.length);
+                    console.log('>>> number of req AFTER  page load:', x.after.length);
+                    chrome.close();
+                    config.get('cb')(null, {
+                        requests: x,
+                        config: config
+                    });
                 },
-                (err) => {
-                    console.log(err.message);
-                    //console.error(err.message)
+                err => {
+                    console.log('got error');
+                    //chrome.close();
+                    //throw err;
+                },
+                s => {
+                    console.log('DONE');
                 }
             );
 

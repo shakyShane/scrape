@@ -4,7 +4,9 @@ var meow     = require('meow');
 var run      = require('./lib/command.run');
 
 var defaultCallback = function (err, output) {
-    console.log('DONE', output);
+    if (err) {
+        throw err;
+    }
 };
 
 var cli = meow({

@@ -16,7 +16,8 @@
     "immutable": "^3.7.4",
     "meow": "^3.3.0",
     "mkdirp": "^0.5.1",
-    "rimraf": "^2.4.2"
+    "rimraf": "^2.4.2",
+    "rx": "^3.0.0"
   },
   "devDependencies": {
     "babel": "^5.8.21",
@@ -25,7 +26,6 @@
     "express": "^4.13.3",
     "faucet": "0.0.1",
     "opn": "^3.0.2",
-    "rx": "^3.0.0",
     "serve-static": "^1.10.0",
     "tape": "^4.0.3"
   }

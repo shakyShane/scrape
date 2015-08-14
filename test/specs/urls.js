@@ -19,7 +19,7 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
     scrape({
         input: [target],
         flags: {
-            output: output
+            outputDir: output
         }
     }, function (err, output) {
 
@@ -27,6 +27,8 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
             console.log('er');
             throw err;
         }
+
+        console.log(output.before.tasks);
 
         t.equal(output.before.tasks.length, 15, 'Return tasks should equal 15 as homepage does not count');
 
