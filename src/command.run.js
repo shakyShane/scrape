@@ -128,7 +128,35 @@ module.exports = function (cli, config) {
         var afterPageLoad = requestStream()
             .skipUntil(obs.Page.loadEventFired)
             .takeUntil(afterPageLoadTimeout())
-            .toArray();
+            .toArray()
+            /**
+             * Take the aggregated tasks and download each file
+             * Return the tasks along with the vinyl objects
+             */
+            .flatMap(tasks => {
+                return downloadItemsAndWrite(tasks, config.get('outputDir'))
+                    .map(files => {
+                        return {
+                            files: files,
+                            tasks: tasks
+                        }
+                    });
+            })
+            /**
+             * Now that all files are downloaded, we can fetch the markup
+             * for the homepage and rewrite the links in it.
+             * Finish by constructing the Object with the tasks, files and homepage
+             * markup
+             */
+            .flatMap(obj => singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem})))
+            /**
+             * Final handler. At this point:
+             * 1. All requests leading upto the homepage have been downloaded
+             * 2. The homepage HTML has been downloaded
+             * 3. The homepage HTML has been rewritten to change
+             *    remove scheme+domains
+             */
+            .flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x));
 
         /**
          * Now zip both before and after events
@@ -148,6 +176,7 @@ module.exports = function (cli, config) {
                     });
                 },
                 err => {
+                    console.log(err.stack);
                     console.log('got error');
                     //chrome.close();
                     //throw err;

@@ -4,12 +4,17 @@ var rmrf   = require('rimraf').sync;
 
 rmrf('public');
 
-scrape({input: ["http://www.bbc.co.uk/"]}, function (err, output) {
+scrape({
+    input: ["http://m2.wearejh.com/karmen-yoga-pant.html"],
+    flags: {
+        afterPageLoadTimeout: 10000
+    }
+}, function (err, output) {
 
     var outputDir = output.config.get('outputDir');
 
-    bs.init({
-        server: outputDir,
-        files: outputDir
-    });
+    //bs.init({
+    //    server: outputDir,
+    //    files: outputDir
+    //});
 });

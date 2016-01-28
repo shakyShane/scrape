@@ -11,6 +11,7 @@ var mkdirp   = require('mkdirp').sync;
 var rmrf     = require('rimraf').sync;
 var join     = require('path').join;
 var debug    = require('debug')('scrape');
+var debugdl    = require('debug')('scrape:dl');
 var Rx       = require('rx');
 var utils    = exports;
 
@@ -54,8 +55,8 @@ utils.downloadItemsAndWrite = function (items, outputDir, cb) {
 
     items.forEach(function (item) {
         var url = item.request.url;
-        debug("DL:", extname(url), basename(url));
-        dl.get(url, join(outputDir, dirname(item.url.pathname)));
+        debugdl("DL: +", join('public', item.url.pathname));
+        dl.get(url, join(process.cwd(), 'public', dirname(item.url.pathname)));
     });
 
     dl.run(function (err, files) {
