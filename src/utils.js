@@ -43,7 +43,7 @@ utils.applyTasks = function (input, tasks) {
  * @param {String} outputDir
  * @param {Function} cb
  */
-utils.downloadItemsAndWrite = function (items, outputDir, cb) {
+utils.downloadItemsAndWrite = function (items, cb) {
 
     cb = cb || function () {};
 
@@ -51,12 +51,12 @@ utils.downloadItemsAndWrite = function (items, outputDir, cb) {
         items = [items];
     }
 
-    var dl       = new Download({mode: '755'});
+    var dl = new Download({mode: '755'});
 
     items.forEach(function (item) {
         var url = item.request.url;
-        debugdl("DL: +", join('public', item.url.pathname));
-        dl.get(url, join(process.cwd(), 'public', dirname(item.url.pathname)));
+        debug("DL:", extname(url), basename(url));
+        dl.get(url, item.output.path);
     });
 
     dl.run(function (err, files) {

@@ -1,16 +1,18 @@
 var scrape = require('../../index');
 var rmrf   = require('rimraf').sync;
+var exists = require('fs').existsSync;
+var join   = require('path').join;
 var http   = require('http');
 var utils  = require('../utils');
 var test   = require('tape');
 
-test('Rewriting absolute URLs to local-root urls', function (t) {
+test.only('Rewriting absolute URLs to flat directory structure', function (t) {
 
     var port     = 9000;
     var target   = 'http://localhost:' + port;
     var output   = 'public';
     var dir      = 'test/fixtures/absolute-urls';
-    var expected = 'test/fixtures/absolute-urls/expected.html';
+    var expected = 'test/fixtures/absolute-urls/expected-flat.html';
     var outIndex = 'public/index.html';
     var server   = utils.staticServer(dir, port);
 
@@ -19,7 +21,8 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
     scrape({
         input: [target],
         flags: {
-            outputDir: output
+            outputDir: output,
+            flat: true
         }
     }, function (err, output) {
 
@@ -28,14 +31,16 @@ test('Rewriting absolute URLs to local-root urls', function (t) {
             throw err;
         }
 
-        console.log(output.before.tasks);
-
-        t.equal(output.before.tasks.length, 15, 'Return tasks should equal 15 as homepage does not count');
-
         server.cleanup();
 
-        t.deepEqual(output.before.home.rewritten, utils.file(expected));
-        t.deepEqual(output.before.home.rewritten, utils.file(outIndex));
+        t.equal(exists(join(process.cwd(), 'public/js/app.min.js')), true);
+
+
+        //t.equal(exists())
+
+
+        //t.deepEqual(before.home.rewritten, utils.file(expected));
+        //t.deepEqual(before.home.rewritten, utils.file(outIndex));
         t.end();
     });
 });

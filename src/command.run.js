@@ -5,6 +5,7 @@ var debug    = require('debug')('scrape');
 var resolve  = require('path').resolve;
 var write    = require('fs').writeFileSync;
 var read     = require('fs').readFileSync;
+var dirname  = require('path').dirname;
 var extname  = require('path').extname;
 var exists   = require('fs').existsSync;
 var basename = require('path').basename;
@@ -47,6 +48,10 @@ module.exports = function (cli, config) {
             return obs.Network.requestWillBeSent
                 .map(req => {
                     req.url = parse(req.request.url);
+                    req.output = {
+                        path: join(config.get('cwd'), config.get('outputDir'), dirname(req.url.pathname)),
+                        filename: basename(req.url.pathname)
+                    };
                     return req;
                 });
         }
@@ -98,8 +103,9 @@ module.exports = function (cli, config) {
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks, config.get('outputDir'))
+                return downloadItemsAndWrite(tasks)
                     .map(files => {
+                        console.log(files);
                         return {
                             files: files,
                             tasks: tasks
