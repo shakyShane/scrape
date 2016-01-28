@@ -2,6 +2,7 @@ function concat (x, y) { return x.concat(y) }
 var Chrome   = require('chrome-remote-interface');
 var parse    = require('url').parse;
 var debug    = require('debug')('scrape');
+var debugxhr    = require('debug')('scrape:xhr');
 var resolve  = require('path').resolve;
 var write    = require('fs').writeFileSync;
 var read     = require('fs').readFileSync;
@@ -48,8 +49,11 @@ module.exports = function (cli, config) {
             return obs.Network.requestWillBeSent
                 .map(req => {
                     req.url = parse(req.request.url);
+                    if (req.type === 'XHR') {
+                        debugxhr(`+ ${req.url.pathname}`);
+                    }
                     req.output = {
-                        path: join(config.get('cwd'), config.get('outputDir'), dirname(req.url.pathname)),
+                        path: join(config.getIn(['output', 'dir']), dirname(req.url.pathname)),
                         filename: basename(req.url.pathname)
                     };
                     return req;
@@ -89,6 +93,7 @@ module.exports = function (cli, config) {
              */
             .filter(x => utils.isValidType(x, config.get('whitelist')))
             .filter(x => !utils.isExcludedHost(x, config.get('hostBlacklist')))
+            .map(x => utils.transform(x, config.get('transforms')))
             /**
              * Aggregate all to a flat array
              */
@@ -103,9 +108,8 @@ module.exports = function (cli, config) {
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks)
+                return downloadItemsAndWrite({items: tasks, config})
                     .map(files => {
-                        console.log(files);
                         return {
                             files: files,
                             tasks: tasks
@@ -118,15 +122,15 @@ module.exports = function (cli, config) {
              * Finish by constructing the Object with the tasks, files and homepage
              * markup
              */
-            .flatMap(obj => singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem})))
-            /**
-             * Final handler. At this point:
-             * 1. All requests leading upto the homepage have been downloaded
-             * 2. The homepage HTML has been downloaded
-             * 3. The homepage HTML has been rewritten to change
-             *    remove scheme+domains
-             */
-            .flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x));
+            .flatMap(obj => singleFileContents(homeItem).map(getReturnObj({tasks: obj.tasks, files: obj.files, homeItem})));
+            ///**
+            // * Final handler. At this point:
+            // * 1. All requests leading upto the homepage have been downloaded
+            // * 2. The homepage HTML has been downloaded
+            // * 3. The homepage HTML has been rewritten to change
+            // *    remove scheme+domains
+            // */
+            //.flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x));
 
         /**
          * After page loaded request events
@@ -134,13 +138,15 @@ module.exports = function (cli, config) {
         var afterPageLoad = requestStream()
             .skipUntil(obs.Page.loadEventFired)
             .takeUntil(afterPageLoadTimeout())
+            .filter(x => utils.isValidType(x, config.get('whitelist')))
+            .map(x => utils.transform(x, config.get('transforms')))
             .toArray()
             /**
              * Take the aggregated tasks and download each file
              * Return the tasks along with the vinyl objects
              */
             .flatMap(tasks => {
-                return downloadItemsAndWrite(tasks, config.get('outputDir'))
+                return downloadItemsAndWrite({items: tasks, config: config})
                     .map(files => {
                         return {
                             files: files,
@@ -162,7 +168,7 @@ module.exports = function (cli, config) {
              * 3. The homepage HTML has been rewritten to change
              *    remove scheme+domains
              */
-            .flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x));
+            //.flatMap(x => writeFile(resolve(config.get('prefix'), 'index.html'), x.home.rewritten).map(done => x))
 
         /**
          * Now zip both before and after events
@@ -173,13 +179,7 @@ module.exports = function (cli, config) {
             })
             .subscribe(
                 x => {
-                    console.log('>>> number of req BEFORE page load:', x.before.tasks.length);
-                    console.log('>>> number of req AFTER  page load:', x.after.length);
-                    chrome.close();
-                    config.get('cb')(null, {
-                        requests: x,
-                        config: config
-                    });
+
                 },
                 err => {
                     console.log(err.stack);
@@ -188,7 +188,12 @@ module.exports = function (cli, config) {
                     //throw err;
                 },
                 s => {
-                    console.log('DONE');
+                    //console.log('>>> number of req BEFORE page load:', x.before.tasks.length);
+                    //console.log('>>> number of req AFTER  page load:', x.after.length);
+                    chrome.close();
+                    config.get('cb')(null, {
+                        config: config
+                    });
                 }
             );
 
