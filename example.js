@@ -5,17 +5,13 @@ var rmrf   = require('rimraf').sync;
 rmrf('public');
 
 scrape({
-    input: ["http://m2.wearejh.com/women/tops-women.html"],
+    //input: ["http://m2.wearejh.com/fiona-fitness-short.html"],
+    //input: ["http://m2.wearejh.com/women/bottoms-women/shorts-women.html"], //cat
+    //input: ["http://m2.wearejh.com/men/bottoms-men.html"], //cat
+    input: ["http://m2.wearejh.com/ajax-full-zip-sweatshirt.html"], //cat
     flags: {
-        afterPageLoadTimeout: 5000,
-        transforms: {
-            "/customer/section/load": (item) => {
-
-                item.downloadName = 'load.json';
-                return item;
-            }
-        }
-    },
+        afterPageLoadTimeout: 50000
+    }
 }, function (err, output) {
 
     var outputDir = output.config.getIn(['output', 'dir']);
