@@ -22,8 +22,8 @@
   },
   "devDependencies": {
     "babel": "^5.8.21",
-    "browser-sync": "^2.8.2",
-    "browser-sync-core": "git://github.com/browsersync/browser-sync-core.git#4ab0427d5a42e11a997a2bbbfa20637b9d3a3766",
+    "browser-sync": "2.11.1",
+    "browser-sync-core": "git://github.com/browsersync/browser-sync-core.git#b1bad87c00cf7e0f79c17c21a13f062df6fa4ddb",
     "download": "^4.2.0",
     "express": "^4.13.3",
     "faucet": "0.0.1",
