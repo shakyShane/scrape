@@ -1,0 +1,3778 @@
+[
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/css_secure",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/css_secure/4600a3e099676514db41859e4febd333.css",
+    "publicPath": "/media/css_secure/4600a3e099676514db41859e4febd333.css",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/css_secure",
+      "base": "4600a3e099676514db41859e4febd333.css",
+      "ext": ".css",
+      "name": "4600a3e099676514db41859e4febd333"
+    },
+    "req": {
+      "requestId": "3950.9562",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/css_secure/4600a3e099676514db41859e4febd333.css",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18293.055804,
+      "wallTime": 1482501004.13358,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 16
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/css_secure/4600a3e099676514db41859e4febd333.css",
+        "path": "/media/css_secure/4600a3e099676514db41859e4febd333.css",
+        "href": "https://staging.childsplayclothing.co.uk/media/css_secure/4600a3e099676514db41859e4febd333.css"
+      }
+    },
+    "id": 1
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/css_secure",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+    "publicPath": "/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/css_secure",
+      "base": "3f4c87fe9382fe2927f6e785213a4f5b.css",
+      "ext": ".css",
+      "name": "3f4c87fe9382fe2927f6e785213a4f5b"
+    },
+    "req": {
+      "requestId": "3950.9563",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18293.055905,
+      "wallTime": 1482501004.13368,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 17
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+        "path": "/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+        "href": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css"
+      }
+    },
+    "id": 2
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/js",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/js/b867357092edde5bb671a7da18b70dc7.js",
+    "publicPath": "/media/js/b867357092edde5bb671a7da18b70dc7.js",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/js",
+      "base": "b867357092edde5bb671a7da18b70dc7.js",
+      "ext": ".js",
+      "name": "b867357092edde5bb671a7da18b70dc7"
+    },
+    "req": {
+      "requestId": "3950.9564",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/js/b867357092edde5bb671a7da18b70dc7.js",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "High"
+      },
+      "timestamp": 18293.055991,
+      "wallTime": 1482501004.13376,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 19
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/js/b867357092edde5bb671a7da18b70dc7.js",
+        "path": "/media/js/b867357092edde5bb671a7da18b70dc7.js",
+        "href": "https://staging.childsplayclothing.co.uk/media/js/b867357092edde5bb671a7da18b70dc7.js"
+      }
+    },
+    "id": 3
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/coolbaby/default",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/coolbaby/default/logo_2.png",
+    "publicPath": "/media/coolbaby/default/logo_2.png",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/coolbaby/default",
+      "base": "logo_2.png",
+      "ext": ".png",
+      "name": "logo_2"
+    },
+    "req": {
+      "requestId": "3950.9566",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/coolbaby/default/logo_2.png",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056124,
+      "wallTime": 1482501004.1339,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2376
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/coolbaby/default/logo_2.png",
+        "path": "/media/coolbaby/default/logo_2.png",
+        "href": "https://staging.childsplayclothing.co.uk/media/coolbaby/default/logo_2.png"
+      }
+    },
+    "id": 4
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/coolbaby/default",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/coolbaby/default/logo-mobile.svg",
+    "publicPath": "/media/coolbaby/default/logo-mobile.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/coolbaby/default",
+      "base": "logo-mobile.svg",
+      "ext": ".svg",
+      "name": "logo-mobile"
+    },
+    "req": {
+      "requestId": "3950.9567",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/coolbaby/default/logo-mobile.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056191,
+      "wallTime": 1482501004.13396,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2377
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/coolbaby/default/logo-mobile.svg",
+        "path": "/media/coolbaby/default/logo-mobile.svg",
+        "href": "https://staging.childsplayclothing.co.uk/media/coolbaby/default/logo-mobile.svg"
+      }
+    },
+    "id": 5
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/banner.jpg",
+    "publicPath": "/media/wysiwyg/banner.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "banner.jpg",
+      "ext": ".jpg",
+      "name": "banner"
+    },
+    "req": {
+      "requestId": "3950.9568",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/banner.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056255,
+      "wallTime": 1482501004.13403,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2512
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/banner.jpg",
+        "path": "/media/wysiwyg/banner.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/banner.jpg"
+      }
+    },
+    "id": 6
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/ss16home_01.jpg",
+    "publicPath": "/media/wysiwyg/ss16home_01.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "ss16home_01.jpg",
+      "ext": ".jpg",
+      "name": "ss16home_01"
+    },
+    "req": {
+      "requestId": "3950.9569",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/ss16home_01.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056317,
+      "wallTime": 1482501004.13409,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2725
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/ss16home_01.jpg",
+        "path": "/media/wysiwyg/ss16home_01.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/ss16home_01.jpg"
+      }
+    },
+    "id": 7
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/coolbaby_pics",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/coolbaby_pics/18_5.jpg",
+    "publicPath": "/media/wysiwyg/coolbaby_pics/18_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/coolbaby_pics",
+      "base": "18_5.jpg",
+      "ext": ".jpg",
+      "name": "18_5"
+    },
+    "req": {
+      "requestId": "3950.9571",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/coolbaby_pics/18_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056411,
+      "wallTime": 1482501004.13418,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2894
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/coolbaby_pics/18_5.jpg",
+        "path": "/media/wysiwyg/coolbaby_pics/18_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/coolbaby_pics/18_5.jpg"
+      }
+    },
+    "id": 8
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home/slides",
+      "base": "aw16_home_banner_TEXT-device.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_banner_TEXT-device"
+    },
+    "req": {
+      "requestId": "3950.9574",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056504,
+      "wallTime": 1482501004.13428,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3359
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg",
+        "path": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-device.jpg"
+      }
+    },
+    "id": 9
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home/slides",
+      "base": "aw16_home_banner_TEXT-desktop.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_banner_TEXT-desktop"
+    },
+    "req": {
+      "requestId": "3950.9575",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056557,
+      "wallTime": 1482501004.13433,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3359
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg",
+        "path": "/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_TEXT-desktop.jpg"
+      }
+    },
+    "id": 10
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home/slides",
+      "base": "aw16_home_banner_4_TEXT-device.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_banner_4_TEXT-device"
+    },
+    "req": {
+      "requestId": "3950.9576",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056614,
+      "wallTime": 1482501004.13439,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3364
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg",
+        "path": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-device.jpg"
+      }
+    },
+    "id": 11
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home/slides",
+      "base": "aw16_home_banner_4_TEXT-desktop.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_banner_4_TEXT-desktop"
+    },
+    "req": {
+      "requestId": "3950.9577",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056671,
+      "wallTime": 1482501004.13444,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3364
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg",
+        "path": "/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/slides/aw16_home_banner_4_TEXT-desktop.jpg"
+      }
+    },
+    "id": 12
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_baby.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_baby.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_baby.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_baby"
+    },
+    "req": {
+      "requestId": "3950.9578",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_baby.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056727,
+      "wallTime": 1482501004.1345,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3380
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_baby.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_baby.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_baby.jpg"
+      }
+    },
+    "id": 13
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_girl.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_girl.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_girl.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_girl"
+    },
+    "req": {
+      "requestId": "3950.9579",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_girl.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056786,
+      "wallTime": 1482501004.13456,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3384
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_girl.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_girl.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_girl.jpg"
+      }
+    },
+    "id": 14
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_boy.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_boy.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_boy.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_boy"
+    },
+    "req": {
+      "requestId": "3950.9580",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_boy.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056842,
+      "wallTime": 1482501004.13461,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3390
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_boy.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_boy.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_boy.jpg"
+      }
+    },
+    "id": 15
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_accessories.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_accessories.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_accessories.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_accessories"
+    },
+    "req": {
+      "requestId": "3950.9581",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_accessories.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056901,
+      "wallTime": 1482501004.13467,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3396
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_accessories.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_accessories.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_accessories.jpg"
+      }
+    },
+    "id": 16
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_new_arrivals2.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_new_arrivals2"
+    },
+    "req": {
+      "requestId": "3950.9582",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.056954,
+      "wallTime": 1482501004.13473,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3402
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_new_arrivals2.jpg"
+      }
+    },
+    "id": 17
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/shoes.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/shoes.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio",
+      "base": "shoes.jpg",
+      "ext": ".jpg",
+      "name": "shoes"
+    },
+    "req": {
+      "requestId": "3950.9583",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/shoes.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057008,
+      "wallTime": 1482501004.13478,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3406
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/shoes.jpg",
+        "path": "/media/wysiwyg/templatestudio/shoes.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/shoes.jpg"
+      }
+    },
+    "id": 18
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_new_collection.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_new_collection.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_new_collection.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_new_collection"
+    },
+    "req": {
+      "requestId": "3950.9584",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_new_collection.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057063,
+      "wallTime": 1482501004.13484,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3412
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_new_collection.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_new_collection.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_new_collection.jpg"
+      }
+    },
+    "id": 19
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_seasonal_trend.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_seasonal_trend"
+    },
+    "req": {
+      "requestId": "3950.9585",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057118,
+      "wallTime": 1482501004.13489,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3416
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_seasonal_trend.jpg"
+      }
+    },
+    "id": 20
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/cp/home/aw16_home_occasions.jpg",
+    "publicPath": "/media/wysiwyg/cp/home/aw16_home_occasions.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/cp/home",
+      "base": "aw16_home_occasions.jpg",
+      "ext": ".jpg",
+      "name": "aw16_home_occasions"
+    },
+    "req": {
+      "requestId": "3950.9586",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_occasions.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057171,
+      "wallTime": 1482501004.13494,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3420
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/cp/home/aw16_home_occasions.jpg",
+        "path": "/media/wysiwyg/cp/home/aw16_home_occasions.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/cp/home/aw16_home_occasions.jpg"
+      }
+    },
+    "id": 21
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/stella-mc_cartney.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/stella-mc_cartney.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio",
+      "base": "stella-mc_cartney.jpg",
+      "ext": ".jpg",
+      "name": "stella-mc_cartney"
+    },
+    "req": {
+      "requestId": "3950.9587",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/stella-mc_cartney.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057225,
+      "wallTime": 1482501004.135,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3424
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/stella-mc_cartney.jpg",
+        "path": "/media/wysiwyg/templatestudio/stella-mc_cartney.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/stella-mc_cartney.jpg"
+      }
+    },
+    "id": 22
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/outnet.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/outnet.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio",
+      "base": "outnet.jpg",
+      "ext": ".jpg",
+      "name": "outnet"
+    },
+    "req": {
+      "requestId": "3950.9588",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/outnet.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057279,
+      "wallTime": 1482501004.13505,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3428
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/outnet.jpg",
+        "path": "/media/wysiwyg/templatestudio/outnet.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/outnet.jpg"
+      }
+    },
+    "id": 23
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e",
+      "base": "fendi_stroller.png",
+      "ext": ".png",
+      "name": "fendi_stroller"
+    },
+    "req": {
+      "requestId": "3950.9589",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057342,
+      "wallTime": 1482501004.13511,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3480
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/f/e/fendi_stroller.png"
+      }
+    },
+    "id": 24
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5",
+      "base": "15255_2.jpeg",
+      "ext": ".jpeg",
+      "name": "15255_2"
+    },
+    "req": {
+      "requestId": "3950.9590",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057395,
+      "wallTime": 1482501004.13517,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3493
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/1/5/15255_2.jpeg"
+      }
+    },
+    "id": 25
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e",
+      "base": "versace_20921_1.jpg",
+      "ext": ".jpg",
+      "name": "versace_20921_1"
+    },
+    "req": {
+      "requestId": "3950.9591",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057449,
+      "wallTime": 1482501004.13522,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3506
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20921_1.jpg"
+      }
+    },
+    "id": 26
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e",
+      "base": "versace_20922_1.jpg",
+      "ext": ".jpg",
+      "name": "versace_20922_1"
+    },
+    "req": {
+      "requestId": "3950.9592",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057503,
+      "wallTime": 1482501004.13528,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3519
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/v/e/versace_20922_1.jpg"
+      }
+    },
+    "id": 27
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5",
+      "base": "25173CP_6.jpg",
+      "ext": ".jpg",
+      "name": "25173CP_6"
+    },
+    "req": {
+      "requestId": "3950.9593",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057556,
+      "wallTime": 1482501004.13533,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3532
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/5/25173CP_6.jpg"
+      }
+    },
+    "id": 28
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u",
+      "base": "burberry_26102_1.jpg",
+      "ext": ".jpg",
+      "name": "burberry_26102_1"
+    },
+    "req": {
+      "requestId": "3950.9594",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057649,
+      "wallTime": 1482501004.13542,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3545
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/b/u/burberry_26102_1.jpg"
+      }
+    },
+    "id": 29
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6",
+      "base": "26352CP_5.jpg",
+      "ext": ".jpg",
+      "name": "26352CP_5"
+    },
+    "req": {
+      "requestId": "3950.9595",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057723,
+      "wallTime": 1482501004.1355,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3558
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/6/26352CP_5.jpg"
+      }
+    },
+    "id": 30
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w",
+      "base": "sw3-1_1.jpg",
+      "ext": ".jpg",
+      "name": "sw3-1_1"
+    },
+    "req": {
+      "requestId": "3950.9596",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057779,
+      "wallTime": 1482501004.13555,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3571
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/s/w/sw3-1_1.jpg"
+      }
+    },
+    "id": 31
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35295CP_6.jpg",
+      "ext": ".jpg",
+      "name": "35295CP_6"
+    },
+    "req": {
+      "requestId": "3950.9597",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057838,
+      "wallTime": 1482501004.13561,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3584
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35295CP_6.jpg"
+      }
+    },
+    "id": 32
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35311CP_15.jpg",
+      "ext": ".jpg",
+      "name": "35311CP_15"
+    },
+    "req": {
+      "requestId": "3950.9598",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.0579,
+      "wallTime": 1482501004.13567,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3597
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35311CP_15.jpg"
+      }
+    },
+    "id": 33
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e",
+      "base": "kenzo_27347_1.jpg",
+      "ext": ".jpg",
+      "name": "kenzo_27347_1"
+    },
+    "req": {
+      "requestId": "3950.9599",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.057956,
+      "wallTime": 1482501004.13573,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3610
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/k/e/kenzo_27347_1.jpg"
+      }
+    },
+    "id": 34
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8",
+      "base": "28052CP_4.jpg",
+      "ext": ".jpg",
+      "name": "28052CP_4"
+    },
+    "req": {
+      "requestId": "3950.9600",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058006,
+      "wallTime": 1482501004.13578,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3623
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/2/8/28052CP_4.jpg"
+      }
+    },
+    "id": 35
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35363CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35363CP_5"
+    },
+    "req": {
+      "requestId": "3950.9601",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058056,
+      "wallTime": 1482501004.13583,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3636
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35363CP_5.jpg"
+      }
+    },
+    "id": 36
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35366CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35366CP_5"
+    },
+    "req": {
+      "requestId": "3950.9602",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058103,
+      "wallTime": 1482501004.13588,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3649
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35366CP_5.jpg"
+      }
+    },
+    "id": 37
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35384CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35384CP_5"
+    },
+    "req": {
+      "requestId": "3950.9603",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058154,
+      "wallTime": 1482501004.13593,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3662
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35384CP_5.jpg"
+      }
+    },
+    "id": 38
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35386CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35386CP_5"
+    },
+    "req": {
+      "requestId": "3950.9604",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058201,
+      "wallTime": 1482501004.13597,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3675
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35386CP_5.jpg"
+      }
+    },
+    "id": 39
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35407CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35407CP_5"
+    },
+    "req": {
+      "requestId": "3950.9605",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058248,
+      "wallTime": 1482501004.13602,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3688
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35407CP_5.jpg"
+      }
+    },
+    "id": 40
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35430CP_1.jpg",
+      "ext": ".jpg",
+      "name": "35430CP_1"
+    },
+    "req": {
+      "requestId": "3950.9606",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058295,
+      "wallTime": 1482501004.13607,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3701
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35430CP_1.jpg"
+      }
+    },
+    "id": 41
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35477CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35477CP_5"
+    },
+    "req": {
+      "requestId": "3950.9607",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058341,
+      "wallTime": 1482501004.13611,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3714
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35477CP_5.jpg"
+      }
+    },
+    "id": 42
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg",
+    "publicPath": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5",
+      "base": "35480CP_5.jpg",
+      "ext": ".jpg",
+      "name": "35480CP_5"
+    },
+    "req": {
+      "requestId": "3950.9608",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058388,
+      "wallTime": 1482501004.13616,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3727
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg",
+        "path": "/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/catalog/product/cache/8/small_image/256x273/9df78eab33525d08d6e5fb8d27136e95/3/5/35480CP_5.jpg"
+      }
+    },
+    "id": 43
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/armani-junior.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/armani-junior.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "armani-junior.jpg",
+      "ext": ".jpg",
+      "name": "armani-junior"
+    },
+    "req": {
+      "requestId": "3950.9609",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/armani-junior.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058435,
+      "wallTime": 1482501004.13621,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3748
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/armani-junior.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/armani-junior.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/armani-junior.jpg"
+      }
+    },
+    "id": 44
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/moschino.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/moschino.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "moschino.jpg",
+      "ext": ".jpg",
+      "name": "moschino"
+    },
+    "req": {
+      "requestId": "3950.9610",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/moschino.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058483,
+      "wallTime": 1482501004.13626,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3753
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/moschino.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/moschino.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/moschino.jpg"
+      }
+    },
+    "id": 45
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/hugo-boss.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/hugo-boss.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "hugo-boss.jpg",
+      "ext": ".jpg",
+      "name": "hugo-boss"
+    },
+    "req": {
+      "requestId": "3950.9611",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/hugo-boss.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058529,
+      "wallTime": 1482501004.1363,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3758
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/hugo-boss.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/hugo-boss.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/hugo-boss.jpg"
+      }
+    },
+    "id": 46
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/monnalisa.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/monnalisa.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "monnalisa.jpg",
+      "ext": ".jpg",
+      "name": "monnalisa"
+    },
+    "req": {
+      "requestId": "3950.9612",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/monnalisa.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058576,
+      "wallTime": 1482501004.13635,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3763
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/monnalisa.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/monnalisa.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/monnalisa.jpg"
+      }
+    },
+    "id": 47
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/moncler.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/moncler.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "moncler.jpg",
+      "ext": ".jpg",
+      "name": "moncler"
+    },
+    "req": {
+      "requestId": "3950.9613",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/moncler.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058624,
+      "wallTime": 1482501004.1364,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3768
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/moncler.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/moncler.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/moncler.jpg"
+      }
+    },
+    "id": 48
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "roberto-cavalli.jpg",
+      "ext": ".jpg",
+      "name": "roberto-cavalli"
+    },
+    "req": {
+      "requestId": "3950.9614",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058676,
+      "wallTime": 1482501004.13645,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3773
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/roberto-cavalli.jpg"
+      }
+    },
+    "id": 49
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "dolce-gabbana.jpg",
+      "ext": ".jpg",
+      "name": "dolce-gabbana"
+    },
+    "req": {
+      "requestId": "3950.9615",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058734,
+      "wallTime": 1482501004.13651,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3778
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/dolce-gabbana.jpg"
+      }
+    },
+    "id": 50
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/young-versace.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/young-versace.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "young-versace.jpg",
+      "ext": ".jpg",
+      "name": "young-versace"
+    },
+    "req": {
+      "requestId": "3950.9616",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/young-versace.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058788,
+      "wallTime": 1482501004.13656,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3783
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/young-versace.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/young-versace.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/young-versace.jpg"
+      }
+    },
+    "id": 51
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/chloe.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/chloe.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "chloe.jpg",
+      "ext": ".jpg",
+      "name": "chloe"
+    },
+    "req": {
+      "requestId": "3950.9617",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/chloe.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058843,
+      "wallTime": 1482501004.13662,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3788
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/chloe.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/chloe.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/chloe.jpg"
+      }
+    },
+    "id": 52
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/gucci.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/gucci.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "gucci.jpg",
+      "ext": ".jpg",
+      "name": "gucci"
+    },
+    "req": {
+      "requestId": "3950.9618",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/gucci.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.0589,
+      "wallTime": 1482501004.13667,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3793
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/gucci.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/gucci.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/gucci.jpg"
+      }
+    },
+    "id": 53
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/burberry.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/burberry.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "burberry.jpg",
+      "ext": ".jpg",
+      "name": "burberry"
+    },
+    "req": {
+      "requestId": "3950.9619",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/burberry.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.058958,
+      "wallTime": 1482501004.13673,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3798
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/burberry.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/burberry.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/burberry.jpg"
+      }
+    },
+    "id": 54
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/fendi.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/fendi.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "fendi.jpg",
+      "ext": ".jpg",
+      "name": "fendi"
+    },
+    "req": {
+      "requestId": "3950.9620",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/fendi.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059017,
+      "wallTime": 1482501004.13679,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3803
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/fendi.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/fendi.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/fendi.jpg"
+      }
+    },
+    "id": 55
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg",
+    "publicPath": "/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg/templatestudio/brands",
+      "base": "ralph-lauren.jpg",
+      "ext": ".jpg",
+      "name": "ralph-lauren"
+    },
+    "req": {
+      "requestId": "3950.9621",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059076,
+      "wallTime": 1482501004.13685,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3808
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg",
+        "path": "/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/templatestudio/brands/ralph-lauren.jpg"
+      }
+    },
+    "id": 56
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg",
+    "publicPath": "/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/templatestudio",
+      "base": "contacts-footer.jpg",
+      "ext": ".jpg",
+      "name": "contacts-footer"
+    },
+    "req": {
+      "requestId": "3950.9622",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059132,
+      "wallTime": 1482501004.1369,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3821
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg",
+        "path": "/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/contacts-footer.jpg"
+      }
+    },
+    "id": 57
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg",
+    "publicPath": "/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/templatestudio",
+      "base": "chat-footer.jpg",
+      "ext": ".jpg",
+      "name": "chat-footer"
+    },
+    "req": {
+      "requestId": "3950.9623",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059198,
+      "wallTime": 1482501004.13697,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3827
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg",
+        "path": "/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/chat-footer.jpg"
+      }
+    },
+    "id": 58
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/twiter.svg",
+    "publicPath": "/media/wysiwyg/twiter.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "twiter.svg",
+      "ext": ".svg",
+      "name": "twiter"
+    },
+    "req": {
+      "requestId": "3950.9624",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/twiter.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059256,
+      "wallTime": 1482501004.13703,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3839
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/twiter.svg",
+        "path": "/media/wysiwyg/twiter.svg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/twiter.svg"
+      }
+    },
+    "id": 59
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/facebook.svg",
+    "publicPath": "/media/wysiwyg/facebook.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "facebook.svg",
+      "ext": ".svg",
+      "name": "facebook"
+    },
+    "req": {
+      "requestId": "3950.9625",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/facebook.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059311,
+      "wallTime": 1482501004.13708,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3844
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/facebook.svg",
+        "path": "/media/wysiwyg/facebook.svg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/facebook.svg"
+      }
+    },
+    "id": 60
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/instagram.svg",
+    "publicPath": "/media/wysiwyg/instagram.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "instagram.svg",
+      "ext": ".svg",
+      "name": "instagram"
+    },
+    "req": {
+      "requestId": "3950.9626",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/instagram.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059369,
+      "wallTime": 1482501004.13714,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3849
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/instagram.svg",
+        "path": "/media/wysiwyg/instagram.svg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/instagram.svg"
+      }
+    },
+    "id": 61
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/youtube.svg",
+    "publicPath": "/media/wysiwyg/youtube.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "youtube.svg",
+      "ext": ".svg",
+      "name": "youtube"
+    },
+    "req": {
+      "requestId": "3950.9627",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/youtube.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059446,
+      "wallTime": 1482501004.13722,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3854
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/youtube.svg",
+        "path": "/media/wysiwyg/youtube.svg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/youtube.svg"
+      }
+    },
+    "id": 62
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg",
+    "publicPath": "/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/templatestudio",
+      "base": "payment-method.jpg",
+      "ext": ".jpg",
+      "name": "payment-method"
+    },
+    "req": {
+      "requestId": "3950.9628",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059517,
+      "wallTime": 1482501004.13729,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 3968
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg",
+        "path": "/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/payment-method.jpg"
+      }
+    },
+    "id": 63
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/wysiwyg/login-logo.jpg",
+    "publicPath": "/media/wysiwyg/login-logo.jpg",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/wysiwyg",
+      "base": "login-logo.jpg",
+      "ext": ".jpg",
+      "name": "login-logo"
+    },
+    "req": {
+      "requestId": "3950.9630",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/wysiwyg/login-logo.jpg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059659,
+      "wallTime": 1482501004.13743,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 4007
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/wysiwyg/login-logo.jpg",
+        "path": "/media/wysiwyg/login-logo.jpg",
+        "href": "https://staging.childsplayclothing.co.uk/media/wysiwyg/login-logo.jpg"
+      }
+    },
+    "id": 64
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif",
+    "publicPath": "/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images",
+      "base": "opc-ajax-loader.gif",
+      "ext": ".gif",
+      "name": "opc-ajax-loader"
+    },
+    "req": {
+      "requestId": "3950.9631",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059723,
+      "wallTime": 1482501004.1375,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 4037
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif",
+        "path": "/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/opc-ajax-loader.gif"
+      }
+    },
+    "id": 65
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/ajax",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif",
+    "publicPath": "/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/ajax",
+      "base": "ajax-loader.gif",
+      "ext": ".gif",
+      "name": "ajax-loader"
+    },
+    "req": {
+      "requestId": "3950.9635",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.05984,
+      "wallTime": 1482501004.13761,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 4306
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif",
+        "path": "/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/ajax/ajax-loader.gif"
+      }
+    },
+    "id": 66
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg",
+    "publicPath": "/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/templatestudio",
+      "base": "toTop.svg",
+      "ext": ".svg",
+      "name": "toTop"
+    },
+    "req": {
+      "requestId": "3950.9636",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059907,
+      "wallTime": 1482501004.13768,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 4313
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg",
+        "path": "/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/toTop.svg"
+      }
+    },
+    "id": 67
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg",
+    "publicPath": "/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/images/templatestudio",
+      "base": "toChat.svg",
+      "ext": ".svg",
+      "name": "toChat"
+    },
+    "req": {
+      "requestId": "3950.9637",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "Low"
+      },
+      "timestamp": 18293.059972,
+      "wallTime": 1482501004.13775,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 4320
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg",
+        "path": "/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/images/templatestudio/toChat.svg"
+      }
+    },
+    "id": 68
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/css_secure",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css",
+    "publicPath": "/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/css_secure",
+      "base": "f4b072cef8e96dbf1eaa6717686b606a.css",
+      "ext": ".css",
+      "name": "f4b072cef8e96dbf1eaa6717686b606a"
+    },
+    "req": {
+      "requestId": "3950.9640",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryLow"
+      },
+      "timestamp": 18293.060273,
+      "wallTime": 1482501004.13805,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 18
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css",
+        "path": "/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css",
+        "href": "https://staging.childsplayclothing.co.uk/media/css_secure/f4b072cef8e96dbf1eaa6717686b606a.css"
+      }
+    },
+    "id": 69
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2",
+    "publicPath": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/fonts/theme",
+      "base": "avenir-next-regular.woff2",
+      "ext": ".woff2",
+      "name": "avenir-next-regular"
+    },
+    "req": {
+      "requestId": "3950.9656",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2",
+        "method": "GET",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36",
+          "Referer": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+          "Origin": "https://staging.childsplayclothing.co.uk"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18294.316791,
+      "wallTime": 1482501005.39451,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2331
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2",
+        "path": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-regular.woff2"
+      }
+    },
+    "id": 70
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+    "publicPath": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/fonts/theme",
+      "base": "avenir-next-demi-bold.woff2",
+      "ext": ".woff2",
+      "name": "avenir-next-demi-bold"
+    },
+    "req": {
+      "requestId": "3950.9659",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+        "method": "GET",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36",
+          "Referer": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+          "Origin": "https://staging.childsplayclothing.co.uk"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18294.317086,
+      "wallTime": 1482501005.3948,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2331
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+        "path": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2"
+      }
+    },
+    "id": 71
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2",
+    "publicPath": "/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/fonts/theme",
+      "base": "icomoon.woff2",
+      "ext": ".woff2",
+      "name": "icomoon"
+    },
+    "req": {
+      "requestId": "3950.9671",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2",
+        "method": "GET",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36",
+          "Referer": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+          "Origin": "https://staging.childsplayclothing.co.uk"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18294.317366,
+      "wallTime": 1482501005.39508,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2331
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2",
+        "path": "/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/icomoon.woff2"
+      }
+    },
+    "id": 72
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme",
+    "filename": "/Users/shaneobsourne/code/scrape/public/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2",
+    "publicPath": "/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2",
+    "parsed": {
+      "root": "/",
+      "dir": "/skin/frontend/coolbaby/default/fonts/theme",
+      "base": "baskerville.woff2",
+      "ext": ".woff2",
+      "name": "baskerville"
+    },
+    "req": {
+      "requestId": "3950.9662",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2",
+        "method": "GET",
+        "headers": {
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36",
+          "Referer": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+          "Origin": "https://staging.childsplayclothing.co.uk"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "VeryHigh"
+      },
+      "timestamp": 18294.317597,
+      "wallTime": 1482501005.39531,
+      "initiator": {
+        "type": "parser",
+        "url": "https://staging.childsplayclothing.co.uk/",
+        "lineNumber": 2331
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2",
+        "path": "/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2",
+        "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/baskerville.woff2"
+      }
+    },
+    "id": 73
+  },
+  {
+    "dirname": "/Users/shaneobsourne/code/scrape/public/media/favicon/default",
+    "filename": "/Users/shaneobsourne/code/scrape/public/media/favicon/default/favicon_2.ico",
+    "publicPath": "/media/favicon/default/favicon_2.ico",
+    "parsed": {
+      "root": "/",
+      "dir": "/media/favicon/default",
+      "base": "favicon_2.ico",
+      "ext": ".ico",
+      "name": "favicon_2"
+    },
+    "req": {
+      "requestId": "3950.9854",
+      "frameId": "3950.1",
+      "loaderId": "3950.136",
+      "documentURL": "https://staging.childsplayclothing.co.uk/",
+      "request": {
+        "url": "https://staging.childsplayclothing.co.uk/media/favicon/default/favicon_2.ico",
+        "method": "GET",
+        "headers": {
+          "Referer": "https://staging.childsplayclothing.co.uk/",
+          "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36"
+        },
+        "mixedContentType": "none",
+        "initialPriority": "High"
+      },
+      "timestamp": 18296.077551,
+      "wallTime": 1482501007.15524,
+      "initiator": {
+        "type": "other"
+      },
+      "type": "Other",
+      "url": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "staging.childsplayclothing.co.uk",
+        "port": null,
+        "hostname": "staging.childsplayclothing.co.uk",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/media/favicon/default/favicon_2.ico",
+        "path": "/media/favicon/default/favicon_2.ico",
+        "href": "https://staging.childsplayclothing.co.uk/media/favicon/default/favicon_2.ico"
+      }
+    },
+    "id": 74
+  }
+]

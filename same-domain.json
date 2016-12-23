@@ -1,0 +1,39 @@
+{
+  "requestId": "3261.99",
+  "frameId": "3261.1",
+  "loaderId": "3261.1",
+  "documentURL": "https://staging.childsplayclothing.co.uk/",
+  "request": {
+    "url": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+    "method": "GET",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2960.0 Safari/537.36",
+      "Referer": "https://staging.childsplayclothing.co.uk/media/css_secure/3f4c87fe9382fe2927f6e785213a4f5b.css",
+      "Origin": "https://staging.childsplayclothing.co.uk"
+    },
+    "mixedContentType": "none",
+    "initialPriority": "VeryHigh"
+  },
+  "timestamp": 8637.979381,
+  "wallTime": 1482491349.32967,
+  "initiator": {
+    "type": "parser",
+    "url": "https://staging.childsplayclothing.co.uk/",
+    "lineNumber": 3458
+  },
+  "type": "Other",
+  "url": {
+    "protocol": "https:",
+    "slashes": true,
+    "auth": null,
+    "host": "staging.childsplayclothing.co.uk",
+    "port": null,
+    "hostname": "staging.childsplayclothing.co.uk",
+    "hash": null,
+    "search": null,
+    "query": null,
+    "pathname": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+    "path": "/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2",
+    "href": "https://staging.childsplayclothing.co.uk/skin/frontend/coolbaby/default/fonts/theme/avenir-next-demi-bold.woff2"
+  }
+}
