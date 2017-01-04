@@ -3,16 +3,20 @@ var scrape = require('./');
 var bs     = require('browser-sync').create();
 var rmrf   = require('rimraf').sync;
 
-rmrf('public');
+// rmrf('public/product');
+// rmrf('public/contact-us');
 
 scrape({
     //input: ["http://m2.wearejh.com/fiona-fitness-short.html"],
     //input: ["http://m2.wearejh.com/women/bottoms-women/shorts-women.html"], // cat
     //input: ["http://m2.wearejh.com/men/bottoms-men.html"], // cat
-    input: ["http://www.sunspel.com/uk/"], // catq
+    // input: ["https://staging.childsplayclothing.co.uk/"], // catq
+    input: ["https://staging.childsplayclothing.co.uk/customer/account/create/"], // catq
 
     flags: {
-        afterPageLoadTimeout: 2000000000
+        afterPageLoadTimeout: 2000000000,
+        // target: 'index'
+        target: 'account-create'
     }
 }, function (err, output) {
 
