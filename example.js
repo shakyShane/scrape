@@ -11,12 +11,12 @@ scrape({
     //input: ["http://m2.wearejh.com/women/bottoms-women/shorts-women.html"], // cat
     //input: ["http://m2.wearejh.com/men/bottoms-men.html"], // cat
     // input: ["https://staging.childsplayclothing.co.uk/"], // catq
-    input: ["https://staging.childsplayclothing.co.uk/customer/account/create/"], // catq
+    input: ["http://ce.demo.wearejh.com/"], // catq
 
     flags: {
         afterPageLoadTimeout: 2000000000,
-        // target: 'index'
-        target: 'account-create'
+        target: 'index',
+        // target: 'account-create'
     }
 }, function (err, output) {
 
