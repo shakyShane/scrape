@@ -8,6 +8,9 @@
     "es6": "babel src --out-dir lib --blacklist useStrict",
     "es6-watch": "babel src --out-dir lib --blacklist useStrict --watch"
   },
+  "files": [
+    "lib"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
