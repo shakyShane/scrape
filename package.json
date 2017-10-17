@@ -1,5 +1,5 @@
 {
-  "name": "scrape",
+  "name": "web-scrape",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -21,16 +21,16 @@
     "meow": "^3.3.0",
     "mime-types": "^2.1.17",
     "mkdirp": "^0.5.1",
-    "mocha": "^3.2.0",
     "rimraf": "^2.4.2",
     "rx": "^3.0.0",
-    "through2": "2.0.0"
+    "through2": "2.0.0",
+    "download": "^6.2.5"
   },
   "devDependencies": {
     "babel": "^5.8.21",
     "browser-sync": "2.11.1",
+    "mocha": "^3.2.0",
     "browser-sync-core": "git://github.com/browsersync/browser-sync-core.git#b1bad87c00cf7e0f79c17c21a13f062df6fa4ddb",
-    "download": "latest",
     "express": "^4.13.3",
     "faucet": "0.0.1",
     "opn": "^3.0.2",
