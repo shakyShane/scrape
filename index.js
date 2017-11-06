@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const debug    = require('debug')('scrape');
 const utils    = require('./lib/utils');
 const meow     = require('meow');
