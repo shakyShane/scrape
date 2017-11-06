@@ -11,9 +11,13 @@
   "files": [
     "lib"
   ],
+  "bin": {
+    "web-scrape": "index.js"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chrome-launcher": "^0.8.1",
     "chrome-remote-interface": "latest",
     "debug": "^2.2.0",
     "download": "^6.2.5",
@@ -35,6 +39,7 @@
     "faucet": "0.0.1",
     "mocha": "^3.2.0",
     "opn": "^3.0.2",
+    "serve": "^6.2.0",
     "serve-static": "^1.10.0",
     "tape": "^4.0.3",
     "through2": "2.0.0"
