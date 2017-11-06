@@ -35,10 +35,25 @@ function handleCli (cli, cb) {
         return;
     }
 
+    if (cli.flags.noLaunch) {
+        const port = cli.flags.port || 9222;
+        return run(cli, {port}, function(err, output) {
+            if (err) {
+                if (err.code === 'ECONNREFUSED') {
+                    return console.log(`ERROR: Chrome not running on port ${port}`);
+                }
+                console.error(err);
+            }
+            console.log('Closing Chrome');
+            console.log('Closing Process');
+            process.exit();
+        });
+    }
+
     if (cli.input.length) {
         const chromeLauncher = require('chrome-launcher');
         chromeLauncher.launch().then(chrome => {
-            run(cli, {port: chrome.port}, function(err, output) {
+            return run(cli, {port: chrome.port}, function(err, output) {
                 if (err) {
                     return console.error(err);
                 }
