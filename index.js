@@ -20,6 +20,9 @@ const cli = meow({
         
     Example: 
         web-scrape http://example.com  --target home --afterPageLoadTimeout 10000
+        
+    Example (with additional domains): 
+        web-scrape http://example.com  --domains sub.example.com
 `
 });
 
