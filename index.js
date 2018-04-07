@@ -3,6 +3,7 @@ const debug    = require('debug')('scrape');
 const utils    = require('./lib/utils');
 const meow     = require('meow');
 const run      = require('./lib/command.run');
+const watch    = require('./lib/command.watch');
 
 const defaultCallback = function (err, output) {
     if (err) {
@@ -25,6 +26,9 @@ const cli = meow({
         web-scrape http://example.com  --domains sub.example.com
 `
 });
+
+const commands = new Set(['watch']);
+const commandMap = {watch, run};
 
 if (!module.parent) {
     handleCli(cli, defaultCallback);
@@ -56,7 +60,23 @@ function handleCli (cli, cb) {
 
     if (cli.input.length) {
         const chromeLauncher = require('chrome-launcher');
-        chromeLauncher.launch().then(chrome => {
+
+        if (commands.has(cli.input[0])) {
+            const [command, url] = cli.input;
+            chromeLauncher.launch({startingUrl: url, headless: false}).then(chrome => {
+                return commandMap[command](cli, {port: chrome.port}, function(err, output) {
+                    if (err) {
+                        return console.error(err);
+                    }
+                    console.log('Closing Chrome');
+                    chrome.kill();
+                    console.log('Closing Process');
+                    process.exit();
+                });
+            });
+            return;
+        }
+        chromeLauncher.launch({startingUrl: cli.input[0]}).then(chrome => {
             return run(cli, {port: chrome.port}, function(err, output) {
                 if (err) {
                     return console.error(err);
